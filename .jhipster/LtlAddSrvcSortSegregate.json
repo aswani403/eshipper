@@ -1,0 +1,44 @@
+{
+    "name": "LtlAddSrvcSortSegregate",
+    "fields": [
+        {
+            "fieldName": "chgType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "segregateMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "segregateMax",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvc",
+            "otherEntityRelationshipName": "ltlAddSrvcSortSegregate",
+            "relationshipName": "ltlAddSrvc",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090456",
+    "entityTableName": "ltl_add_srvc_sort_segregate",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

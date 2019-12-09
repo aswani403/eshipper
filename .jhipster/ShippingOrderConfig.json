@@ -1,0 +1,104 @@
+{
+    "name": "ShippingOrderConfig",
+    "fields": [
+        {
+            "fieldName": "canadianCustoms",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isInsuranceManifested",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "transitDays",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "bolId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 250
+        },
+        {
+            "fieldName": "originTerminal",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "destinationTerminal",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "terminalinfoLink",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 500
+        },
+        {
+            "fieldName": "inBondCargoControlNum",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 45
+        },
+        {
+            "fieldName": "isShipmentReceivedAtCWW",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isBOLCreated",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isInsuranceEmailSendToUPIC",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isEcomShipment",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "isUseCustomCpAcct",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "shippingOrderConfig",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090520",
+    "entityTableName": "shipping_order_config",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

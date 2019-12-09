@@ -1,0 +1,545 @@
+{
+    "name": "Franchise",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "payableName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "messageToCustomer",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "descMessageToCustomer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ltlContactMsg",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "prefix",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "systemKeyword",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "logoFileName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "logo2FileName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "webLogoFileName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "monerisStoreIdCad",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "monerisApiTokenCad",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "defaultCurrencyId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "defaultVehicleTypeId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "taxNum",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "invSpMesg",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "customLabel",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "invoiceWarnDays",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "invoiceDisableDays",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "stylesheet",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "policyUrl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "allowFlatRating",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "allowWwInBound",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "allowAffiliate",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "showRates",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "defaultMarkup",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "emailContent",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "emailContentFr",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "esFeePerc",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseInHouseIns",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseInHouseIns",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseSmtp",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseSmtp",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "carrierService",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "defaultService",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "packageType",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "defaultPackageType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseCredentail",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseCredentail",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseEmail",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseEmail",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "masterFranchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchisePage",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchisePage",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseCharge",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseCharge",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "eshipperUser",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "defaultUser",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "defaultCustomer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "webCustomer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "accountReceivable",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "accountReceivable"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataFedexUS",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataFedexUS"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataFedexCan",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataFedexCan"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataFedexWebCan",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataFedexWebCan"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataFedexWebUsa",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataFedexWebUsa"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataUpsCan",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataUpsCan"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataUpsUSA",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataUpsUSA"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataPurolatorAcc",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataPurolatorAcc"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataCanparAcc",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataCanparAcc"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataCanadaPostAcc",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataCanadaPostAcc"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "carrierDataDhlUsaAcc",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrierDataDhlUsaAcc"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "franchiseAramex",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseAramex"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "franchiseDhlgm",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseDhlgm"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "franchiseFreightcom",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseFreightcom"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "franchiseOrangeds",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseOrangeds"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "accountPayableTransaction",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "accountPayableTransaction"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "carrier",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "carrier",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "instantQuote",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "instantQuote",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "news",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "news",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseMarkup",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "franchiseMarkup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customsInvoice",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "customsInvoice",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "codAccount",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "codAccount",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customerMarkup",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "customerMarkup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlTracking",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "ltlTracking",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "pickup",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "pickup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "surcharge",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "surcharge",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsPayableCategory",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "accountsPayableCategory",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsPayablePayables",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "accountsPayablePayables",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woAgent",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "woAgent",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ediHeader",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "ediHeader",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woInvoice",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "woInvoice",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woOrders",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "woOrders",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woSalesAgent",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "woSalesAgent",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woService",
+            "otherEntityRelationshipName": "franchise",
+            "relationshipName": "woService",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090421",
+    "entityTableName": "franchise",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

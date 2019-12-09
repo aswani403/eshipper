@@ -1,0 +1,76 @@
+{
+    "name": "AccountsPayablePayables",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "paymentMethod",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "disabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "terms",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 3
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "address",
+            "otherEntityRelationshipName": "accountsPayablePayables",
+            "relationshipName": "address",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "accountsPayablePayables",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsPayableCategory",
+            "otherEntityRelationshipName": "accountsPayablePayables",
+            "relationshipName": "accountsPayableCategory",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "apChequeTrans",
+            "otherEntityRelationshipName": "accountsPayablePayables",
+            "relationshipName": "apChequeTrans",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090531",
+    "entityTableName": "accounts_payable_payables",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

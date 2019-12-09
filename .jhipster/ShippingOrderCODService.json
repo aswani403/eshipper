@@ -1,0 +1,52 @@
+{
+    "name": "ShippingOrderCODService",
+    "fields": [
+        {
+            "fieldName": "codPayment",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "codValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "codCurrency",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "codPayableTo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "shippingOrderCODService",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090517",
+    "entityTableName": "shipping_order_cod_service",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

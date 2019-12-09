@@ -1,0 +1,40 @@
+{
+    "name": "EcommerceOrderTaxLines",
+    "fields": [
+        {
+            "fieldName": "taxLinesTitle",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "taxLinesRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "taxLinesPrice",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ecommerceOrders",
+            "otherEntityRelationshipName": "ecommerceOrderTaxLines",
+            "relationshipName": "ecommerceOrders",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191209090608",
+    "entityTableName": "ecommerce_order_tax_lines",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

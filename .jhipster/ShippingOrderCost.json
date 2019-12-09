@@ -1,0 +1,116 @@
+{
+    "name": "ShippingOrderCost",
+    "fields": [
+        {
+            "fieldName": "baseCostToMf",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "baseCostToF",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "freightTariff",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "baseCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "baseChargeSell",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelCostToMf",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelCostToF",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelSurcharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelSurchargeSell",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelTariff",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "totalTariff",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "totalCost",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalSellPrice",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "grossProfitToF",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "grossProfitToMf",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalCostFranchise",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalCostMfFranchise",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "actualBaseCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalChargeUser",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "totActWgt",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "totActQuantity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "shippingOrderCost",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090516",
+    "entityTableName": "shipping_order_cost",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

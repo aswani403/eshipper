@@ -1,0 +1,147 @@
+{
+    "name": "LtlServices",
+    "fields": [
+        {
+            "fieldName": "serviceName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "serviceType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "costType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "fuelSurchrgePercnt",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "effectDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "termDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "wghtDensityPerFt",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "wghtExcessLengthThreshld",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "wghtExcessLengthWghtPerFt",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "wghtNonStackPalletHtThreshld",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "wghtNonStackPalletHt",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "wghtMinPalletWght",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlMoRate",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlMoRate",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlFromCity",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlFromCity",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlShipToRate",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlShipToRate",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlStateProvinceSurcharge",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlStateProvinceSurcharge",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlTracking",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlTracking",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlTransitTime",
+            "otherEntityRelationshipName": "ltlServices",
+            "relationshipName": "ltlTransitTime",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090502",
+    "entityTableName": "ltl_services",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

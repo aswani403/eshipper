@@ -1,0 +1,44 @@
+{
+    "name": "LtlAddSrvcPckpSaturday",
+    "fields": [
+        {
+            "fieldName": "chgType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupSatMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupSatMax",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvc",
+            "otherEntityRelationshipName": "ltlAddSrvcPckpSaturday",
+            "relationshipName": "ltlAddSrvc",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090446",
+    "entityTableName": "ltl_add_srvc_pckp_saturday",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

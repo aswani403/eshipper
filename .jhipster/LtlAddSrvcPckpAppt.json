@@ -1,0 +1,44 @@
+{
+    "name": "LtlAddSrvcPckpAppt",
+    "fields": [
+        {
+            "fieldName": "chgType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupApptMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupApptMax",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvc",
+            "otherEntityRelationshipName": "ltlAddSrvcPckpAppt",
+            "relationshipName": "ltlAddSrvc",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090447",
+    "entityTableName": "ltl_add_srvc_pckp_appt",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

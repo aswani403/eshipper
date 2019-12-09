@@ -1,0 +1,40 @@
+{
+    "name": "ArApCustomer",
+    "fields": [
+        {
+            "fieldName": "entityId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "arApCustomerEntityType",
+            "otherEntityRelationshipName": "arApCustomer",
+            "relationshipName": "arApCustomerEntityType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountPayableTransaction",
+            "otherEntityRelationshipName": "arApCustomer",
+            "relationshipName": "accountPayableTransaction",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090336",
+    "entityTableName": "ar_ap_customer",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

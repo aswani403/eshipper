@@ -1,0 +1,40 @@
+{
+    "name": "FranchiseCharge",
+    "fields": [
+        {
+            "fieldName": "insChPercent",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "aftHoursChPercent",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelChPercent",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "registrationCharge",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "franchiseCharge",
+            "relationshipName": "franchise",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090425",
+    "entityTableName": "franchise_charge",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,224 @@
+{
+    "name": "CustomerGeneral",
+    "fields": [
+        {
+            "fieldName": "brokerName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "taxId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "invoiceCurrency",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "invoiceCurrencyId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "invoiceEmail",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "deleted",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "apiPassword",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "apiUsername",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "isWebCustomer",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "netTerms",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "netTermsWarning",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "storeFront",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "uspsAccountType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "allowThirdParty",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "procFeeThirdParty",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "applyTax",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "showNews",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "codAccount",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "nmfcCode",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "freightClass",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "allowUpsCod",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "ltlCustomsRequired",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "smartepostPickupScheduled",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        },
+        {
+            "fieldName": "refCodeMandatory",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "inBondCustomer",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "disableIfUnpaidInvoices",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "avilableLimit",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "isSmartepostCustomer",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "packageType",
+            "otherEntityRelationshipName": "customerGeneral",
+            "relationshipName": "defaultPackageType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerGeneral",
+            "relationshipName": "customer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090349",
+    "entityTableName": "customer_general",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

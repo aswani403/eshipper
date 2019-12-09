@@ -1,0 +1,32 @@
+{
+    "name": "ArApCustomerEntityType",
+    "fields": [
+        {
+            "fieldName": "entityType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "arApCustomer",
+            "otherEntityRelationshipName": "arApCustomerEntityType",
+            "relationshipName": "arApCustomer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090335",
+    "entityTableName": "ar_ap_customer_entity_type",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

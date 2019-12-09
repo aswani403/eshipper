@@ -1,0 +1,48 @@
+{
+    "name": "CustomerFlatrate",
+    "fields": [
+        {
+            "fieldName": "flatCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatChargeFinal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatCost1",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatCost2",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatCost3",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatRate",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerFlatrate",
+            "relationshipName": "customer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090356",
+    "entityTableName": "customer_flatrate",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

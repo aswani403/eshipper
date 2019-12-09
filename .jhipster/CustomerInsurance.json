@@ -1,0 +1,36 @@
+{
+    "name": "CustomerInsurance",
+    "fields": [
+        {
+            "fieldName": "insurancePercentage",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "insurancePreference",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerInsurance",
+            "relationshipName": "customer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090351",
+    "entityTableName": "customer_insurance",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

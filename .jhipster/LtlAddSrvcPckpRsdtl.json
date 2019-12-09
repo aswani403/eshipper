@@ -1,0 +1,44 @@
+{
+    "name": "LtlAddSrvcPckpRsdtl",
+    "fields": [
+        {
+            "fieldName": "chgType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupRsdtlMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pickupRsdtlMax",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvc",
+            "otherEntityRelationshipName": "ltlAddSrvcPckpRsdtl",
+            "relationshipName": "ltlAddSrvc",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090443",
+    "entityTableName": "ltl_add_srvc_pckp_rsdtl",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

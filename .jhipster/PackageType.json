@@ -1,0 +1,83 @@
+{
+    "name": "PackageType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "pacType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchiseMarkup",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "franchiseMarkup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ecommerceOrders",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "ecommerceOrders",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customerMarkup",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "customerMarkup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "pickup",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "pickup",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ediCarrierPackageTypes",
+            "otherEntityRelationshipName": "packageType",
+            "relationshipName": "ediCarrierPackageTypes",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090345",
+    "entityTableName": "package_type",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

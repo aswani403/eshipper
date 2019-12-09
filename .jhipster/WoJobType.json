@@ -1,0 +1,39 @@
+{
+    "name": "WoJobType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ediShippingOrder",
+            "otherEntityRelationshipName": "woJobType",
+            "relationshipName": "ediShippingOrder",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woPod",
+            "otherEntityRelationshipName": "woJobType",
+            "relationshipName": "woPod",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090556",
+    "entityTableName": "wo_job_type",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

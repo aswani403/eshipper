@@ -1,0 +1,96 @@
+{
+    "name": "Surcharge",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "costToMf",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "costToF",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "sell",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "position",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "chargedAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "fuelAplcble",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "surcharge",
+            "relationshipName": "shippingOrder",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "surcharge",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "surchargeType",
+            "otherEntityRelationshipName": "surcharge",
+            "relationshipName": "chargeType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woSubservice",
+            "otherEntityRelationshipName": "surcharge",
+            "relationshipName": "woSubservice",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090524",
+    "entityTableName": "surcharge",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "EdiCarrierPackageTypes",
+    "fields": [
+        {
+            "fieldName": "carrierPackageName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 5
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "packageType",
+            "otherEntityRelationshipName": "ediCarrierPackageTypes",
+            "relationshipName": "packageType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ediCarrierProcessor",
+            "otherEntityRelationshipName": "ediCarrierPackageTypes",
+            "relationshipName": "ediCarrierProcessor",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191209090614",
+    "entityTableName": "edi_carrier_package_types",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

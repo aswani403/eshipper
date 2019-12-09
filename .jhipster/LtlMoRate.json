@@ -1,0 +1,97 @@
+{
+    "name": "LtlMoRate",
+    "fields": [
+        {
+            "fieldName": "weightMinRate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weightLtlRate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight500Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight1000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight2000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight5000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight10000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight20000Rate",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "country",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "province",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "fromProvince",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "province",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "toProvince",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "city",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "fromCity",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "city",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "toCity",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlServices",
+            "otherEntityRelationshipName": "ltlMoRate",
+            "relationshipName": "ltlServices",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090501",
+    "entityTableName": "ltl_mo_rate",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

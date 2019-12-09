@@ -1,0 +1,52 @@
+{
+    "name": "CodAccount",
+    "fields": [
+        {
+            "fieldName": "currency",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "codAccount",
+            "relationshipName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "codAccount",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "codTransaction",
+            "otherEntityRelationshipName": "codAccount",
+            "relationshipName": "codTransaction",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090414",
+    "entityTableName": "cod_account",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

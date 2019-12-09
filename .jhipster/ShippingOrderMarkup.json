@@ -1,0 +1,52 @@
+{
+    "name": "ShippingOrderMarkup",
+    "fields": [
+        {
+            "fieldName": "customerMarkup",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "customerMarkdown",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "customerMarkupType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 10
+        },
+        {
+            "fieldName": "originalMarkdownType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 10
+        },
+        {
+            "fieldName": "franchiseMarkup",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "shippingOrderMarkup",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090519",
+    "entityTableName": "shipping_order_markup",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

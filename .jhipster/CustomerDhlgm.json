@@ -1,0 +1,52 @@
+{
+    "name": "CustomerDhlgm",
+    "fields": [
+        {
+            "fieldName": "dhl",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "dhlEcomAccountNum",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "dhlecSoldToNum",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "isDhlgmCustomer",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 4
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerDhlgm",
+            "relationshipName": "customer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090355",
+    "entityTableName": "customer_dhlgm",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
