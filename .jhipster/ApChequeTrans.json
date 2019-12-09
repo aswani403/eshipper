@@ -1,0 +1,49 @@
+{
+    "name": "ApChequeTrans",
+    "fields": [
+        {
+            "fieldName": "chequeId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        },
+        {
+            "fieldName": "payId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 20
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsPayableCheque",
+            "otherEntityRelationshipName": "apChequeTrans",
+            "relationshipName": "accountsPayableCheque",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsPayablePayables",
+            "otherEntityRelationshipName": "apChequeTrans",
+            "relationshipName": "accountsPayablePayables",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090534",
+    "entityTableName": "ap_cheque_trans",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

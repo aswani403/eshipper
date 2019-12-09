@@ -1,0 +1,132 @@
+{
+    "name": "WoPod",
+    "fields": [
+        {
+            "fieldName": "chargeComments",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "fuelPercCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelPercCost",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "podTimestamp",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "podGivenTo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "podName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "progressComment",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "taxType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "taxType2",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "isCompleted",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fuelCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "fuelCost",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "taxValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "taxValue2",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "total",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "podTimestampHours",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 45
+        },
+        {
+            "fieldName": "podTimestampMinutes",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 45
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woJobType",
+            "otherEntityRelationshipName": "woPod",
+            "relationshipName": "woJobType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "woWorkOrder",
+            "otherEntityRelationshipName": "woPod",
+            "relationshipName": "woWorkOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090606",
+    "entityTableName": "wo_pod",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

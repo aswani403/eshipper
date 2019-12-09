@@ -1,0 +1,44 @@
+{
+    "name": "LtlAddSrvcDlvryAppt",
+    "fields": [
+        {
+            "fieldName": "chgType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "apptMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "apptMax",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvc",
+            "otherEntityRelationshipName": "ltlAddSrvcDlvryAppt",
+            "relationshipName": "ltlAddSrvc",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090454",
+    "entityTableName": "ltl_add_srvc_dlvry_appt",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

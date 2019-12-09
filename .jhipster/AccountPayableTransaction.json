@@ -1,0 +1,112 @@
+{
+    "name": "AccountPayableTransaction",
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "invoiceAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "payCheck",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "payDesc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "payDuedate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "payinvoicedate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "paypaiddate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "payrefid",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "paystatus",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "taxamountgst",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "taxamounthst",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "taxamountother",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentmethod",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 45
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "arApCustomer",
+            "otherEntityRelationshipName": "accountPayableTransaction",
+            "relationshipName": "arApCustomer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "accountPayableTransaction",
+            "relationshipName": "franchise",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191209090333",
+    "entityTableName": "account_payable_transaction",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

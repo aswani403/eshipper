@@ -1,0 +1,81 @@
+{
+    "name": "FranchiseMarkup",
+    "fields": [
+        {
+            "fieldName": "value",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup15",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup610",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup1115",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup16Plus",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlValueCAUS",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlValueUSCA",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlInboundValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "disabled",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "franchiseMarkup",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "packageType",
+            "otherEntityRelationshipName": "franchiseMarkup",
+            "relationshipName": "packageType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "carrierService",
+            "otherEntityRelationshipName": "franchiseMarkup",
+            "relationshipName": "carrierService",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090432",
+    "entityTableName": "franchise_markup",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

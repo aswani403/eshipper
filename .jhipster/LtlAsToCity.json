@@ -1,0 +1,45 @@
+{
+    "name": "LtlAsToCity",
+    "fields": [
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "city",
+            "otherEntityRelationshipName": "ltlAsToCity",
+            "relationshipName": "toCity",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "city",
+            "otherEntityRelationshipName": "ltlAsToCity",
+            "relationshipName": "asToCity",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "province",
+            "otherEntityRelationshipName": "ltlAsToCity",
+            "relationshipName": "toProvince",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090458",
+    "entityTableName": "ltl_as_to_city",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,128 @@
+{
+    "name": "ShippingOrderAddSvc",
+    "fields": [
+        {
+            "fieldName": "deliveryAppt",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "satDelivery",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "hold",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "returnService",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "insideDelivery",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "insidePickup",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "pierCharge",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sortSegregate",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "docsOnly",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "dangerousGoods",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "signatureRequired",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "insuranceType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "insuredAmount",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "homelandSecurity",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "saturdayPickup",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "singleShipment",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "crossBorderFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "excessLength",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "limitedAccess",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "customsFreight",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "militaryBaseDelivery",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "inBondFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "exibitionSite",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "shippingOrder",
+            "otherEntityRelationshipName": "shippingOrderAddSvc",
+            "relationshipName": "shippingOrder",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090515",
+    "entityTableName": "shipping_order_add_svc",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

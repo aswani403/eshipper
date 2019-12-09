@@ -1,0 +1,72 @@
+{
+    "name": "FranchiseInHouseIns",
+    "fields": [
+        {
+            "fieldName": "inHouseInsEmailTo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "inHouseInsChargeUS",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsChargeCA",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsCost",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsCostFr",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsMinCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsChargeUSLtl",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsChargeCALtl",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsCostLtl",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsCostFrLtl",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "inHouseInsMinChargeLtl",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "franchiseInHouseIns",
+            "relationshipName": "franchise",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090426",
+    "entityTableName": "franchise_in_house_ins",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

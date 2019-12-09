@@ -1,0 +1,179 @@
+{
+    "name": "WoInvoice",
+    "fields": [
+        {
+            "fieldName": "invoicePrefix",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "datePaid",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "curId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "amountFreight",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "amountFuel",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "amountOther",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "tax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paidAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "gstTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstOnTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstBcTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstNbTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstNsTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hstNlTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pstTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "qstTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "otherTaxes",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "adjustment",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentStatus",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "paymentType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 11
+        },
+        {
+            "fieldName": "discount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "usFedTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "usStateTax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "dueDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "modifiedDueDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "woInvoice",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "woInvoice",
+            "relationshipName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "codTransaction",
+            "otherEntityRelationshipName": "woInvoice",
+            "relationshipName": "codTransaction",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "accountsReceivableDetails",
+            "otherEntityRelationshipName": "woInvoice",
+            "relationshipName": "accountsReceivableDetails",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090555",
+    "entityTableName": "wo_invoice",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,125 @@
+{
+    "name": "CustomerMarkup",
+    "fields": [
+        {
+            "fieldName": "markupType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": 10
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup15",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup610",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup1115",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markup16Plus",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "markupONQC",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "disabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "intlValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlValueCAUS",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlValueUSCA",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "intlInboundValue",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "flatRateCharge",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "disabledCa",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "disabledUs",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "disabledByCustomer",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "commCourierOpExpense",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "minValue",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerMarkup",
+            "relationshipName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "franchise",
+            "otherEntityRelationshipName": "customerMarkup",
+            "relationshipName": "franchise",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "carrierService",
+            "otherEntityRelationshipName": "customerMarkup",
+            "relationshipName": "carrierService",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "packageType",
+            "otherEntityRelationshipName": "customerMarkup",
+            "relationshipName": "packageType",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090419",
+    "entityTableName": "customer_markup",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

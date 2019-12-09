@@ -1,0 +1,56 @@
+{
+    "name": "CustomerOperational",
+    "fields": [
+        {
+            "fieldName": "commCourierDeductAffiliateFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "commCourierDeductTranFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "commCourierOpExpense",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "commPalletDeductAffiliateFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "commPalletDeductTranFee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "commPalletOpExpense",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "transactionFeeCourierService",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "transactionFeePalletService",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "customer",
+            "otherEntityRelationshipName": "customerOperational",
+            "relationshipName": "customer",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090354",
+    "entityTableName": "customer_operational",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

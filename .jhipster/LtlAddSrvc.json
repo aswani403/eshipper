@@ -1,0 +1,196 @@
+{
+    "name": "LtlAddSrvc",
+    "fields": [
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvryCnstructn",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvryCnstructn",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcCod",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcCod",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcCrossBorder",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcCrossBorder",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDangerGoods",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDangerGoods",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvryAppt",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvryAppt",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvryInside",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvryInside",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvryRsdntls",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvryRsdntls",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvrySaturday",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvrySaturday",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcDlvryTailgate",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcDlvryTailgate",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcHeatedDetails",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcHeatedDetails",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcHome",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcHome",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcInbondFreight",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcInbondFreight",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcLimitedAccess",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcLimitedAccess",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpAppt",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpAppt",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpCnstructn",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpCnstructn",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpRsdtl",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpRsdtl",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpInside",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpInside",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpSaturday",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpSaturday",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPckpTailgate",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPckpTailgate",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcPierAccess",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcPierAccess",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlAddSrvcSortSegregate",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "ltlAddSrvcSortSegregate",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "additionalServiceChg",
+            "otherEntityRelationshipName": "ltlAddSrvc",
+            "relationshipName": "additionalServiceChg",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191209090436",
+    "entityTableName": "ltl_add_srvc",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

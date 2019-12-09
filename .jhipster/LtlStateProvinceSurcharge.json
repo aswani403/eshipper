@@ -1,0 +1,53 @@
+{
+    "name": "LtlStateProvinceSurcharge",
+    "fields": [
+        {
+            "fieldName": "ltlSrchrgMax",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "ltlSrchrgMin",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "ltlSrchrgRate",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "country",
+            "otherEntityRelationshipName": "ltlStateProvinceSurcharge",
+            "relationshipName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "province",
+            "otherEntityRelationshipName": "ltlStateProvinceSurcharge",
+            "relationshipName": "stProv",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlServices",
+            "otherEntityRelationshipName": "ltlStateProvinceSurcharge",
+            "relationshipName": "ltlServices",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090504",
+    "entityTableName": "ltl_state_province_surcharge",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

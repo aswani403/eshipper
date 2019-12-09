@@ -1,0 +1,81 @@
+{
+    "name": "LtlShipToRate",
+    "fields": [
+        {
+            "fieldName": "weightMinRate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weightLtlRate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight500Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight1000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight2000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight5000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight10000Rate",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "weight20000Rate",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "ltlServices",
+            "otherEntityRelationshipName": "ltlShipToRate",
+            "relationshipName": "ltlServices",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "country",
+            "otherEntityRelationshipName": "ltlShipToRate",
+            "relationshipName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "province",
+            "otherEntityRelationshipName": "ltlShipToRate",
+            "relationshipName": "toState",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "city",
+            "otherEntityRelationshipName": "ltlShipToRate",
+            "relationshipName": "toCity",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191209090503",
+    "entityTableName": "ltl_ship_to_rate",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

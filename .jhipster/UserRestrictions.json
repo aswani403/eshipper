@@ -1,0 +1,80 @@
+{
+    "name": "UserRestrictions",
+    "fields": [
+        {
+            "fieldName": "shippingOrder",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "fuelSurcharge",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "quote",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "userManagement",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "operations",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "defaultTab",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "shipToFilter",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "shipFromFilter",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "salesPerson",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "markupTable",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "invoiceGen",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "viewRates",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "shareAddressBook",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191209090528",
+    "entityTableName": "user_restrictions",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

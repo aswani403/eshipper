@@ -1,0 +1,40 @@
+{
+    "name": "LtlFuelSurcharge",
+    "fields": [
+        {
+            "fieldName": "weekBeginDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ltlFuelSrchrgLtlRates",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "ltlFuelSrchrgTlRates",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "ltlFuelSrchrgTlHeavyRates",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "ltlFuelSrchrgEffectDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ltlFuelSrchrgTermDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191209090500",
+    "entityTableName": "ltl_fuel_surcharge",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
