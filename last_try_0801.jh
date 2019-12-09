@@ -1,0 +1,3506 @@
+entity CustomsInvoice {
+ 
+  brokerName String maxlength(255) 
+  consigneeAccount String maxlength(255) 
+  contactCompany String maxlength(255) 
+  contactName String maxlength(255) 
+  contactPhone String maxlength(255) 
+  currency String maxlength(255) 
+  recipientTaxId String maxlength(255) 
+  sedNumber String maxlength(255) 
+  taxId String maxlength(255) 
+  thirdPartyAccount String maxlength(255)  
+   
+  
+}
+entity CustomsInvoiceBilling {
+  billTo String maxlength(255) 
+  Address1 String maxlength(255) 
+  Address2 String maxlength(255) 
+  City String maxlength(255) 
+  Company String maxlength(255) 
+  Country String maxlength(255) 
+  CountryName String maxlength(255) 
+  Postal String maxlength(255) 
+  Province String maxlength(255)
+}
+entity CustomsInvoiceIbm {
+  Carrier String maxlength(255) 
+  CustomsCleared String maxlength(255) 
+  HandlingInfo String maxlength(255) 
+  LocationGoods String maxlength(255) 
+  ManifestedFrom String maxlength(255) 
+  ManifestedTo String maxlength(255) 
+  ManifestWeight Float 
+  ManifestWeightUnits String maxlength(255) 
+  PreviousCargo String maxlength(255) 
+  VehicleId String maxlength(255)
+}
+entity CustomsInvoiceProduct {
+  
+  countryOfOrigin String maxlength(255) 
+  description String maxlength(255) 
+  harmonizedCode String maxlength(255) 
+  itemCode String maxlength(255) 
+  position Integer max(11) 
+  quantity Integer max(11) 
+  unitPrice Double 
+  weightLb Float 
+  weightOz Float 
+   
+ 
+}
+
+entity AdditionalService {
+  
+  Name String maxlength(255) 
+  
+}
+entity AdditionalServiceChg {
+  
+  chgMax Float 
+  chgMin Float 
+  chgRate Float 
+  chgType String maxlength(255) 
+  
+}
+entity AccountPayableTransaction {
+
+	amount Double
+    currency Integer max(11)
+    invoiceAmount Double
+    payCheck String maxlength(255)
+    payDesc String maxlength(255)
+    payDuedate LocalDate
+    payinvoicedate LocalDate
+    paypaiddate LocalDate
+    payrefid String maxlength(255)
+    paystatus Integer max(11)
+    taxamountgst Double
+    taxamounthst Double
+    taxamountother Double  
+    paymentmethod String maxlength(45)
+    
+    
+}
+entity AccountReceivable {
+  
+  
+  dateCreated ZonedDateTime
+  invoiceNumber Integer max(20)
+  amount Double 
+  amountreceived Double 
+  checkno String maxlength(45) 
+  datereceived LocalDate 
+  comments String maxlength(200) 
+  status Integer max(11) 
+  paymentmethod String maxlength(45) 
+  
+ }
+  
+  entity ArApCustomerEntityType {
+  
+    entityType String maxlength(255)
+ 
+}
+entity ArApCustomer{
+  entityId Integer max(20)
+  
+}
+entity Country {
+  name String maxlength(255)
+  fullName String maxlength(255)
+  
+}
+entity Province {
+  
+  name String maxlength(255)
+  fullName String maxlength(255)
+  
+ 
+ }
+ entity City {
+  
+  city String maxlength(255)
+   
+  
+ 
+ }
+entity Carrier {
+  
+  name String maxlength(255)
+  carrierType Integer max(11) 
+  classType String maxlength(50) 
+  
+} 
+entity Address{
+
+  consigneeName String maxlength(255)
+  consigneeId String maxlength(255)
+  address1 String maxlength(255) 
+  address2 String maxlength(255)    
+  postalCode String maxlength(255) 
+  phoneNo String maxlength(255) 
+  faxNo String maxlength(255) 
+  mobilePhoneNo String maxlength(255) 
+  emailAddress String maxlength(255) 
+  contactName String maxlength(255) 
+  
+  
+  }
+  
+  entity AddressBook{
+  
+    
+  consigneeName String maxlength(255)
+  consigneeId String maxlength(255)
+  address1 String maxlength(255) 
+  address2 String maxlength(255)
+  postalCode String maxlength(255) 
+  phoneNo String maxlength(255) 
+  dateCreated LocalDate
+  defaultFrom Boolean
+  defaultTo Boolean
+  contactName String maxlength(255)
+  contactEmail String maxlength(255)
+  contactEmail2 String maxlength(255)
+  contactEmail3 String maxlength(255)
+  distributionListname String maxlength(255) 
+  instruction String maxlength(255) 
+  notify Boolean
+  refcode String maxlength(255) 
+  residential Boolean
+  taxId String maxlength(255) 
+    
+}
+
+
+
+entity ShippingAddress {
+ 
+  attention String maxlength(255)
+  company String maxlength(255)
+  address1 String maxlength(255)
+  address2 String maxlength(255)
+  phone String maxlength(255)
+  email String maxlength(255)
+  postalCode String maxlength(255)
+  confirmDelivery Boolean
+  instructions String maxlength(255)
+  notifyRecipient Boolean
+  res Boolean
+  tailgate Boolean
+ 
+}
+
+
+entity ShipmentPackage{
+ description String maxlength(255)
+  length Integer max(11)
+  width Integer max(11)
+  height Integer max(11)
+  weight Integer max(11)
+  position Integer max(11)
+  trackingNumber String maxlength(255)
+  cubedWeight Integer max(11)
+  codValue Float
+  insuranceAmount Float
+  freightClass String maxlength(10)
+  type String maxlength(255)
+  nmfcCode String maxlength(50) 
+  weightOz Integer max(11)
+  itemValue Float
+  harmonizedCode String maxlength(100)
+  
+}
+entity PackageType {
+  name String maxlength(255) 
+  pacType Integer max(11) 
+  description String maxlength(255) 
+   
+}
+
+entity CustomPackages {
+ 
+  packageName String maxlength(255)
+  packageDesc String maxlength(255)
+  length Integer max(11)
+  width  Integer max(11)
+  height  Integer max (11)
+  weight Integer max (11)  
+  weightOz Integer max (11)
+  
+   
+   
+}
+
+entity CommissionReport {
+  
+  
+  dateCreated ZonedDateTime 
+  curId Integer max(11)
+  amount Double
+  gstTax Double
+  commStatus Integer max(11)
+  totalOpExpense Double
+  totalTranFee Double
+  totalEsFee Double
+  comment String maxlength(255) 
+  directReport Integer max(11)
+  
+} 
+
+entity Customer {
+  
+  accountNumber String maxlength(255) 
+  name String maxlength(255) 
+  address1 String maxlength(255) 
+  address2 String maxlength(255)    
+  postalCode String maxlength(255)   
+  phone String maxlength(255) 
+  email String maxlength(255) 
+  timeZone String maxlength(255) 
+  costAccount Integer max(4) 
+  dateCreated ZonedDateTime    
+  creator Integer max(20)
+  contact String maxlength(255)
+  isShopifyEnable Boolean
+  defaultSignatureOption Integer max(10)
+  
+  
+  
+}
+
+entity CustomerGeneral {
+  
+  brokerName String maxlength(255) 
+  taxId String maxlength(255) 
+  invoiceCurrency String maxlength(255) 
+  invoiceCurrencyId Integer max(11) 
+  invoiceEmail String maxlength(255)  
+  active Boolean 
+  deleted Boolean 
+  apiPassword String maxlength(255) 
+  apiUsername String maxlength(255) 
+  status Integer max(4)  
+  isWebCustomer Boolean 
+  netTerms Integer max(11)
+  netTermsWarning Integer max(11)
+  storeFront Boolean 
+  uspsAccountType String maxlength(255) 
+  allowThirdParty Integer max(4)
+  procFeeThirdParty Double 
+  applyTax Boolean 
+  showNews Boolean 
+  codAccount Integer max(4) 
+  nmfcCode Integer max(4) 
+  freightClass Integer max(4) 
+  allowUpsCod Boolean 
+  ltlCustomsRequired Integer max(4) 
+  smartepostPickupScheduled Integer max(4) 
+  refCodeMandatory Boolean 
+  inBondCustomer Boolean 
+  disableIfUnpaidInvoices Boolean  
+  avilableLimit Float
+  isSmartepostCustomer Integer max(4) 
+   }
+   entity CustomerReference {
+    reference1 String maxlength(255) 
+    reference2 String maxlength(255) 
+    reference3 String maxlength(255) 
+}  
+   entity CustomerInsurance {
+         
+       insurancePercentage Float 
+       insurancePreference Integer max(11)
+   }
+   
+  entity CustomerCnb {
+         
+        applyCreditLimit Boolean 
+        creditLimit Float
+		isChargeCreditCard Boolean 
+		chargeLevel Integer max(11) 
+		ccReceipt Integer max(4) 
+		streetNumber String maxlength(255) 
+        streetName String maxlength(255) 
+        postalCode String maxlength(255) 
+       	
+		
+  }
+  
+  entity CustomerAffiliate {
+  
+  affiliate Boolean  
+  rebatePerc Float
+  discountPerc Float
+  affLoginPage String maxlength(255) 
+  affRegEmailContent Blob
+  affRegEmailContentFr Blob
+  affRegPage String maxlength(255) 
+  affRegPageFr String maxlength(255)
+  affiliateId Integer max(20) 
+  affiliateKickBack Float 
+  externalAffiliateNum String maxlength(255)
+  
+  }
+  
+  entity CustomerOperational {
+   
+  commCourierDeductAffiliateFee Boolean 
+  commCourierDeductTranFee Boolean 
+  commCourierOpExpense Float 
+  commPalletDeductAffiliateFee Boolean 
+  commPalletDeductTranFee Boolean 
+  commPalletOpExpense Float 
+  transactionFeeCourierService Float 
+  transactionFeePalletService Float 
+  
+  }
+ 
+  entity CustomerDhlgm {
+  
+  dhl Float 
+  dhlEcomAccountNum String maxlength(255) 
+  dhlecSoldToNum String maxlength(255) 
+  isDhlgmCustomer Integer max(4)
+  
+  }
+  
+  
+  
+  
+  entity CustomerFlatrate {
+ 
+  flatCharge Float 
+  flatChargeFinal Float 
+  flatCost1 Float 
+  flatCost2 Float 
+  flatCost3 Float 
+  flatRate Boolean 
+   
+  }
+  
+  entity CustomerRestrictedCountry {
+    
+		enable Boolean
+   
+   }
+   
+   entity RestrictedCountry{
+   
+		name String maxlength(255)
+   }
+  entity CarrierService {
+  name String maxlength(255)   
+  cost Double 
+  charge Double 
+  tranFee Double 
+  description String maxlength(255) 
+  code String maxlength(255) 
+  codeUs String maxlength(255) 
+  codeIntl String maxlength(255) 
+  mailShape String maxlength(255) 
+  serviceTimeMins Integer max(11)  
+  mode Integer max(11) 
+  serviceNameUS String maxlength(255) 
+  transitCodeUS String maxlength(45) 
+  transitCodeCA String maxlength(45) 
+  transitCodeIntl String maxlength(45) 
+  provider String maxlength(255) 
+  color String maxlength(250) 
+  guaranteed Boolean 
+  infoUrl String maxlength(255) 
+}
+
+entity AffiliateLogs {
+  
+  fromDate LocalDate 
+  toDate LocalDate 
+  amountPaid Double 
+  currencyPaid String maxlength(3) 
+  notes String maxlength(1000) 
+  deleted Boolean 
+}
+entity CarrierAccount {
+
+  courier Boolean    
+  account String maxlength(255) 
+  locationCode String maxlength(255)   
+  manifestPrefix String maxlength(255) 
+  ftpAddress String maxlength(255) 
+  ftpUsername String maxlength(255) 
+  ftpPassword String maxlength(255) 
+  notifyEmail String maxlength(255) 
+  thirdPartyData Boolean 
+  wbStaticData String maxlength(255) 
+  firstTrackingNo String maxlength(255) 
+  currentTrackingNo String maxlength(255) 
+  lastTrackingNo String maxlength(255) 
+  firstManifestNo String maxlength(255) 
+  currentManifestNo String maxlength(255) 
+  lastManifestNo String maxlength(255) 
+  dateCreated LocalDate 
+  webMeterNumber String maxlength(255) 
+  serverMeterNumber String maxlength(255) 
+  serverType String maxlength(255) 
+  reference1 String maxlength(255) 
+  reference2 String maxlength(255) 
+  reference3 String maxlength(255) 
+}
+entity CarrierDataFedexUS {
+  
+  
+  useCustomFedexUsaAcct Boolean  
+  acctNum String maxlength(255)  
+  meterNum String maxlength(255) 
+  type String maxlength(255)
+  dateCreated LocalDate 
+  
+  
+  }
+  entity CarrierDataFedexCan {
+  
+  useCustomFedexCanAcct Boolean  
+  acctNum String maxlength(255)  
+  meterNum String maxlength(255) 
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataFedexWebCan {
+  
+  useCustomFedexWebserviceCanAcct Boolean  
+  acctNum String maxlength(255)  
+  meterNum String maxlength(255) 
+  key String maxlength(255)
+  password String maxlength(45)
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+   entity CarrierDataFedexWebUsa {
+  
+  useCustomFedexWebserviceUsaAcct Boolean  
+  acctNum String maxlength(255)  
+  meterNum String maxlength(255) 
+  key String maxlength(255)
+  password String maxlength(45)
+  markup Float
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataUpsCan {
+  
+  useCustomUpsCanAcct Boolean  
+  acctNum String maxlength(255)  
+  userName String maxlength(255) 
+  key String maxlength(255)
+  password String maxlength(45)
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataUpsUSA {
+  
+  useCustomUpsUsaAcct Boolean  
+  acctNum String maxlength(255)  
+  userName String maxlength(255) 
+  key String maxlength(255)
+  password String maxlength(45)
+  markup Float
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataPurolatorAcc {
+  
+    
+  acctNum String maxlength(255)
+  key String maxlength(255)    
+  password String maxlength(45)
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataCanparAcc {
+  
+  useCustomCanparAcct Boolean
+  acctNum String maxlength(255)  
+  userName String maxlength(255)
+  password String maxlength(45)
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataCanadaPostAcc {
+  
+  useCustomCanadaPostAcct Boolean
+  acctNum String maxlength(255) 
+  cntrNum String maxlength(255)   
+  userName String maxlength(255)
+  password String maxlength(45)
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  }
+  
+  entity CarrierDataDhlUsaAcc {
+  
+  useCustomDhlUsaAcct Boolean
+  acctNum String maxlength(255) 
+  ImprAcctNum String maxlength(255)   
+  userName String maxlength(255)
+  password String maxlength(45)
+  markup Float
+  tier Integer max(1)
+  importTier Integer max(1) 
+  type String maxlength(255)
+  dateCreated LocalDate
+  
+  
+  }
+  
+  entity EshipperConfig {
+  
+  configKey String maxlength(45)
+  configValue String maxlength(255)
+  version Integer max(11)
+  requiredForGui Boolean
+  createDate LocalDate
+  lastUpdatedTime LocalDate
+ 
+}
+
+  
+ 
+entity Cctransaction {
+   
+  authorizationNumber String maxlength(255) 
+  amount Double 
+  type Integer max(11) 
+  dateCreated LocalDate 
+  refNum String maxlength(255) 
+  processorTranId String maxlength(255) 
+  procMessage String maxlength(255) 
+  receiptId String maxlength(255) 
+  cardNumCharged String maxlength(255) 
+  chargeType Integer max(11)   
+  currency Integer max(11) 
+  entityType Integer max(11) 
+}
+entity CodAccount {
+  currency Integer max(11) 
+  dateCreated LocalDate 
+  
+}
+entity CodTransaction {
+  dateCreated LocalDate 
+  type Integer max(11) 
+  description String maxlength(255) 
+  amount Float   
+  position Integer max(11)    
+  accRecvId Integer max(20) 
+}
+
+entity CreditCard {
+  ccNumber String maxlength(255) 
+  maskedNum String maxlength(45) 
+  ccExpiryMonth String maxlength(255) 
+  ccExpiryYear String maxlength(255) 
+  dateCreated LocalDate 
+  active Boolean   
+  
+}
+entity Crm {
+  name String maxlength(100) 
+  address1 String maxlength(765) 
+  address2 String maxlength(765)    
+  postalCode String maxlength(10)  
+  phone String maxlength(10) 
+  creator Integer max(20) 
+  comments String maxlength(765) 
+  status Boolean 
+  dateCreated LocalDate 
+  deadlineDate LocalDate 
+  deleted Boolean 
+}
+entity CustomOptions {
+   
+  quoteViewOption Integer max(11) 
+}
+entity CustomerMarkup {
+  
+      
+  markupType Integer max(10)
+  value Float 
+  markup15 Float 
+  markup610 Float 
+  markup1115 Float 
+  markup16Plus Float 
+  markupONQC Float 
+  disabled Boolean 
+  intlValue Float 
+  intlValueCAUS Float 
+  intlValueUSCA Float 
+  intlInboundValue Float 
+  flatRateCharge Float   
+  disabledCa Boolean 
+  disabledUs Boolean 
+  disabledByCustomer Boolean 
+  commCourierOpExpense Float 
+  minValue Float 
+}
+
+entity BatchShipment {
+  distributionName String maxlength(255) 
+  dateCreated String maxlength(30)
+  status String maxlength(10) 
+  rateCount Integer max(20) 
+  rateErrorCount Integer max(20) 
+  serviceType String maxlength(20)    
+  shipmentCount Integer max(20) 
+  shipmentErrorCount Integer max(20) 
+  batchId String maxlength(50) 
+  email String maxlength(255) 
+  distributionCharge Float   
+  isManifest Boolean 
+  batchOrderId Integer max(20) 
+  manifestFileName String maxlength(255) 
+  attemptCount Integer max(11) 
+  BOLUS String maxlength(250) 
+  BOLINTL String maxlength(250) 
+  toalWeightUS Double 
+  toalWeightINTL Double 
+  isBatchReported Boolean 
+  isBatchReceivedAtCWW Boolean 
+}
+entity Franchise {
+
+  name String maxlength(255)
+  payableName String maxlength(255) 
+  description String maxlength(255) 
+  messageToCustomer String maxlength(255) 
+  descMessageToCustomer String
+  ltlContactMsg String maxlength(100) 
+  prefix String maxlength(255) 
+  systemKeyword String maxlength(20) 
+  logoFileName String maxlength(255) 
+  logo2FileName String maxlength(20) 
+  webLogoFileName String maxlength(20)   
+  monerisStoreIdCad String maxlength(255) 
+  monerisApiTokenCad String maxlength(255) 
+  defaultCurrencyId Integer max(11) 
+  defaultVehicleTypeId Integer max(11)    
+  taxNum String maxlength(255) 
+  invSpMesg String maxlength(255) 
+  customLabel Boolean   
+  invoiceWarnDays Integer max(11) 
+  invoiceDisableDays Integer max(11) 
+  stylesheet String maxlength(40)  
+  policyUrl String maxlength(100)   
+  allowFlatRating Boolean 
+  allowWwInBound Boolean 
+  allowAffiliate Boolean   
+  showRates Boolean 
+  defaultMarkup Float 
+  emailContent Blob
+  emailContentFr Blob      
+  esFeePerc Float 
+  
+ 
+ 
+}
+
+
+
+entity FranchiseCredentail {
+
+  eshipUserId String maxlength(255) 
+  eshipPassword String maxlength(255) 
+  apiUsername String maxlength(100) 
+  apiPassword String maxlength(100) 
+  
+  }
+  
+  entity FranchiseEmail {
+  
+  claimEmail String maxlength(100) 
+  operationsEmail String maxlength(255) 
+  adminEmail String maxlength(255) 
+  financeAdminEmail String maxlength(255) 
+  
+  }
+  
+  entity FranchisePage {
+  
+  singlePage Integer max(11)
+  homePage String maxlength(255) 
+  loginPage String maxlength(255) 
+  registrationPage String maxlength(40) 
+  navigationPage String maxlength(40) 
+  registeredLoginPage String maxlength(60)
+  registrationMessageUrl String maxlength(200) 
+  
+  }
+  
+  entity FranchiseCharge {
+   
+   insChPercent Float 
+  aftHoursChPercent Float 
+  fuelChPercent Float
+  registrationCharge Float 
+  
+  }
+  
+entity FranchiseInHouseIns {
+  
+  inHouseInsEmailTo String maxlength(100) 
+  inHouseInsChargeUS Float 
+  inHouseInsChargeCA Float 
+  inHouseInsCost Float 
+  inHouseInsCostFr Float 
+  inHouseInsMinCharge Float 
+  inHouseInsChargeUSLtl Float 
+  inHouseInsChargeCALtl Float 
+  inHouseInsCostLtl Float 
+  inHouseInsCostFrLtl Float 
+  inHouseInsMinChargeLtl Float 
+  
+  }
+  
+  entity FranchiseSmtp {
+  
+ smtpHost String maxlength(40) 
+  smtpUsername String maxlength(40) 
+  smtpPassword String maxlength(20) 
+  smtpPort Integer max(6) 
+  smtpAuth Boolean 
+  smtpLocalhost String maxlength(40) 
+  
+  }
+  
+  entity FranchiseFreightcom {
+  freightcomAccount String maxlength(255) 
+  freightcomPassword String maxlength(255) 
+  useOwnFcAccount Boolean
+  }
+  
+  entity FranchiseAramex {
+  
+  aramexUser String maxlength(100) 
+  aramexPassword String maxlength(100) 
+  aramexAccountEntity String maxlength(100) 
+  aramexAccountNumber String maxlength(100) 
+  aramexAccountCountryCode String maxlength(100) 
+  aramexAccountPin String maxlength(100) 
+  aramexPuroKey String maxlength(100) 
+  aramexPuroPassword String maxlength(100) 
+  aramexPuroAccountNumber String maxlength(100) 
+  aramexEmail String maxlength(100)
+}  
+entity FranchiseDhlgm {
+   dhlgmSoldtoNumber String maxlength(255) 
+  dhlgmPickupNumber String maxlength(255) 
+  dhlgmFtpLocation String maxlength(255) 
+  dhlgmFtpUsername String maxlength(255) 
+  dhlgmFtpPassword String maxlength(255)  
+  
+  }
+  
+  
+  entity FranchiseOrangeds {
+  
+  useOwnOrangedsAccount Boolean 
+  orangedsAccountNumber String maxlength(255) 
+  orangedsUsername String maxlength(255) 
+  orangedsPassword String maxlength(255)  
+  
+  }
+entity FranchiseMarkup {
+   
+   
+  
+  value Float 
+  markup15 Float 
+  markup610 Float 
+  markup1115 Float 
+  markup16Plus Float 
+  intlValue Float 
+  intlValueCAUS Float 
+  intlValueUSCA Float 
+  intlInboundValue Float 
+  disabled Boolean 
+}
+entity FuelSurcharge {
+   
+  type String maxlength(255) 
+  value Double 
+  intlValue Double 
+  
+}
+entity InstantQuote {
+
+  businessName String maxlength(600) 
+  attention String maxlength(600) 
+  emailId String maxlength(300) 
+  phone String maxlength(150) 
+  fromZip String maxlength(150)    
+  toZip String maxlength(150) 
+  totalWeight Double 
+  pkgQuantity Integer max(10) 
+  dateCreated LocalDate    
+  affiliateCode String maxlength(150) 
+}
+entity InstantQuotePackage {
+   
+  length Integer max(11) 
+  width Integer max(11) 
+  height Integer max(11) 
+  weight Integer max(11) 
+  freightClass String maxlength(10) 
+  position Integer max(11) 
+}
+entity LtlAddSrvc {
+  
+  dateCreated ZonedDateTime
+  
+ 
+  }
+   
+  
+   
+  entity LtlAddSrvcCod {
+  
+  chgType String maxlength(255) 
+  rate Float 
+  codMin Float 
+  codMax Float 
+  
+  }
+  
+  entity LtlAddSrvcHeatedDetails { 
+  
+  chgType String maxlength(255) 
+  rate Float 
+  heatedMin Float 
+  heatedMax Float
+  heatedNoSvcStartDt LocalDate
+  heatedNoSvcEndDt LocalDate
+  
+  }
+  
+  entity LtlAddSrvcHome {
+   
+  chgType String maxlength(255) 
+  rate Float 
+  securityMin Float 
+  securityMax Float
+  
+  }
+  
+  entity LtlAddSrvcCrossBorder {
+  chgType String maxlength(255) 
+  rate Float 
+  crossBorderMin Float 
+  crossBorderMax Float 
+  }
+  
+  entity LtlAddSrvcLimitedAccess {
+  chgType String maxlength(255) 
+  rate Float 
+  accessMin Float 
+  accessMax Float
+  }  
+  
+  entity LtlAddSrvcPierAccess {
+  chgType String maxlength(255) 
+  rate Float 
+  pierAccessMin Float 
+  pierAccessMax Float 
+}
+entity LtlAddSrvcPckpRsdtl {
+
+  chgType String maxlength(255) 
+  rate Float 
+  pickupRsdtlMin Float 
+  pickupRsdtlMax Float 
+  
+  }
+  
+   entity LtlAddSrvcPckpTailgate {
+  chgType String maxlength(255) 
+  rate Float 
+  pickupTailgateMin Float 
+  pickupTailgateMax Float 
+  
+  }
+  
+  
+  
+  entity LtlAddSrvcPckpInside {
+
+  chgType String maxlength(255) 
+  rate Float  
+  pickupInsideMin Float 
+  pickupInsideMax Float
+  
+  }
+  
+  entity LtlAddSrvcPckpSaturday {
+
+  chgType String maxlength(255) 
+  rate Float 
+  pickupSatMin Float 
+  pickupSatMax Float
+  
+  }
+  
+ 
+  
+  entity LtlAddSrvcPckpAppt {
+   
+  chgType String maxlength(255) 
+  rate Float 
+  pickupApptMin Float 
+  pickupApptMax Float 
+  }
+  entity LtlAddSrvcPckpCnstructn {
+  
+   chgType String maxlength(255) 
+   rate Float 
+   pickupCnstructnSiteMin Float 
+   pickupCnstructnSiteMax Float
+  }
+  
+  entity LtlAddSrvcDlvryRsdntls {
+  
+  chgType String maxlength(255) 
+  rate Float 
+  residentialMin Float 
+  residentialMax Float
+  
+  }
+  
+  
+  
+  
+entity LtlAddSrvcDlvryCnstructn {
+   
+  
+  chgType String maxlength(255) 
+  rate Float  
+  cnstructnSiteMin Float 
+  cnstructnSiteMax Float 
+  
+  }
+  
+  entity LtlAddSrvcDlvryTailgate {
+  
+  chgType String maxlength(255) 
+  rate Float 
+  tailgateMin Float 
+  tailgateMax Float
+  
+  } 
+  
+  entity LtlAddSrvcDlvryInside {
+  
+  chgType String maxlength(255) 
+  rate Float 
+  insideMin Float 
+  insideMax Float 
+  
+  } 
+  
+  entity LtlAddSrvcDlvrySaturday {
+  
+  chgType String maxlength(255) 
+  rate Float 
+  satMin Float 
+  satMax Float
+
+  }
+  entity LtlAddSrvcDlvryAppt {
+  
+  chgType String maxlength(255) 
+  rate Float  
+  apptMin Float 
+  apptMax Float 
+  }
+  
+  entity LtlAddSrvcInbondFreight {
+  
+  chgType String maxlength(255) 
+  rate Float
+ freightMin Float 
+  freightMax Float 
+  }
+  
+   entity LtlAddSrvcSortSegregate {
+   
+  chgType String maxlength(255) 
+  rate Float 
+  segregateMin Float 
+  segregateMax Float 
+  
+  }
+  
+  entity LtlAddSrvcDangerGoods {
+   
+  chgType String maxlength(255) 
+  rate Float 
+  roadMin Float 
+  roadMax Float 
+  
+  }
+  
+  
+      
+  
+entity LtlAsToCity {
+  dateCreated ZonedDateTime
+  
+}
+entity LtlFromCity {
+     
+  dateCreated ZonedDateTime   
+  
+}
+entity LtlFuelSurcharge {
+
+  weekBeginDate LocalDate 
+  ltlFuelSrchrgLtlRates Float 
+  ltlFuelSrchrgTlRates Float 
+  ltlFuelSrchrgTlHeavyRates Float 
+  ltlFuelSrchrgEffectDate LocalDate 
+  ltlFuelSrchrgTermDate LocalDate 
+}
+entity LtlMoRate {
+
+  
+   
+  weightMinRate Float 
+  weightLtlRate Float 
+  weight500Rate Float 
+  weight1000Rate Float 
+  weight2000Rate Float 
+  weight5000Rate Float 
+  weight10000Rate Float 
+  weight20000Rate Float 
+}
+
+entity LtlServices {
+
+  serviceName String maxlength(255)
+  serviceType String maxlength(255)
+  costType String maxlength(255) 
+  fuelSurchrgePercnt Integer max(20) 
+  effectDate LocalDate 
+  termDate LocalDate 
+  wghtDensityPerFt Integer max(20) 
+  wghtExcessLengthThreshld Integer max(20) 
+  wghtExcessLengthWghtPerFt Integer max(20) 
+  wghtNonStackPalletHtThreshld Integer max(20) 
+  wghtNonStackPalletHt Integer max(20) 
+  wghtMinPalletWght Integer max(20) 
+}
+entity LtlShipToRate {
+  
+  
+  weightMinRate Float 
+  weightLtlRate Float 
+  weight500Rate Float 
+  weight1000Rate Float 
+  weight2000Rate Float 
+  weight5000Rate Float 
+  weight10000Rate Float 
+  weight20000Rate Float 
+}
+
+entity LtlStateProvinceSurcharge {
+   
+  ltlSrchrgMax Float 
+  ltlSrchrgMin Float 
+  ltlSrchrgRate Float 
+   
+}
+
+entity LtlTracking {
+  
+  proNumberStart Integer max(50)
+  proNumberEnd Integer max(50)
+  proNumberNext Integer max(50)
+  closed String maxlength(255)
+  
+}
+
+entity LtlTransitTime {
+   
+  transitTime String maxlength(255) 
+}
+entity News {
+   
+  dateCreated LocalDate 
+  dateExpired LocalDate 
+  title String maxlength(255) 
+  textNews String
+  locationType Integer max(11)   
+  displayOrderNum Integer max(11) 
+}
+entity OrderStatus {
+  name String maxlength(255) 
+}
+entity PackingSlip {
+   
+  trackingNumber String maxlength(255) 
+  label Blob
+  createdDate LocalDate 
+}
+entity Pickup {
+  locationType String maxlength(255) 
+  companyName String maxlength(255) 
+  address1 String maxlength(255) 
+  address2 String maxlength(255) 
+  packageLocation String maxlength(255)  
+  postalCode String maxlength(255) 
+  pickupDate LocalDate 
+  pickupTime String maxlength(255) 
+  closeTime String maxlength(255) 
+  afterhoursClosingTime String maxlength(255) 
+  afterhoursClosingLocation String maxlength(255) 
+  numPackages Integer max(11) 
+  weight String maxlength(255) 
+  specialInstructions String maxlength(255) 
+  contactName String maxlength(255) 
+  contactPhone String maxlength(255) 
+  contactExtension String maxlength(255)   
+  status Integer max(20) 
+  confirmationNumber String maxlength(255) 
+  dhlCarrierReference String maxlength(255) 
+  charge Float 
+  currency String maxlength(10) 
+  nextPickupDate LocalDate 
+  callTime String maxlength(25) 
+  callTime2 String maxlength(25) 
+  readyTime String maxlength(25) 
+  readyTime2 String maxlength(25) 
+  chargeCardType String maxlength(255) 
+  chargeCardNumber String maxlength(255) 
+  chargeCardExpiryDate String maxlength(255)
+  email String maxlength(255) 
+  reference String maxlength(45) 
+  destinationCountryCode String maxlength(10) 
+  overweight Boolean   
+  residential Boolean 
+}  
+entity ProductList {
+   
+  description String maxlength(255) 
+  harmonizedCode String maxlength(255)   
+  unitPrice String maxlength(255) 
+  dateCreated LocalDate 
+  itemCode String maxlength(255) 
+  itemValue Float 
+  weight Float 
+  weightOz Integer max(11) 
+  quantity Integer max(11) 
+}
+entity Role {
+  
+  name String maxlength(255)
+  description String maxlength(255) 
+}
+entity ShippingLabels {
+   
+  trackingNumber String maxlength(255) 
+  label Blob
+  htmlLabel Blob
+  astraLabelString String maxlength(255) 
+  twoDLabelString String maxlength(1000)   
+  shipDateString String maxlength(255) 
+  actualWeightString String maxlength(255) 
+  systemNumString String maxlength(255) 
+  dimmedString String maxlength(255) 
+  delivDayString String maxlength(255) 
+  delivByString String maxlength(255) 
+  ursaCodeString String maxlength(255) 
+  serviceCommitmentString String maxlength(255) 
+  serviceDestinationString String maxlength(255) 
+  formId String maxlength(255) 
+  labelType Integer max(11) 
+  codLabel Blob
+  manifestLabel Blob
+}
+
+
+entity ShippingOrder {
+   
+  quantity Integer max(20) 
+  referenceCode String maxlength(255) 
+  paymentType String maxlength(255) 
+  insuranceValue Float 
+  insuranceValue3rd Float    
+  pickupTime String maxlength(255) 
+  specialEquipment String maxlength(255)   
+  reqDeliveryDate String maxlength(255) 
+  scheduledShipDate LocalDate  
+  storeFrontMarkup Float   
+  editable Boolean 
+  dateCreated LocalDate 
+  paperManifestStatus Integer max(11) 
+  isEManifested Boolean 
+  manifestNumber String maxlength(255)   
+  refundStatus Integer max(11) 
+  pickupNum Integer max(11) 
+  modeTransport String maxlength(255) 
+  reference2 String maxlength(255) 
+  reference3 String maxlength(255)    
+  currency Integer max(11)   
+  ediVerified Boolean 
+  ediInvoiceNumber String maxlength(255) 
+  paymentTypeId Integer max(11)   
+  vehicleFull Boolean 
+  afterHours Boolean    
+  waitTime Integer max(11) 
+  assignDriverId Integer max(20) 
+  commDriverId Integer max(20)    
+  vehicleType Integer max(11) 
+  sameDayService String maxlength(20) 
+  sameDayVehicle String maxlength(20)   
+  dimType Integer max(11)    
+  codPinNumber String maxlength(15) 
+  carrierPickUpConf String maxlength(100)    
+  creator Integer max(20)  
+  batchName String maxlength(50)    
+  distributionQuote Float    
+  shipmentError String maxlength(1000) 
+  rateError String maxlength(1000) 
+  perCubicFeet Float   
+  labelUrl String maxlength(250) 
+  manifestUrl String maxlength(250) 
+  manifestlabelUrl String maxlength(250)    
+  createdBy Float  
+  internalNotes String maxlength(255) 
+  pickupOption Integer max(10)
+  maxTransitDays Integer max(11) 
+  markupType Integer max(11) 
+  updateColorCode Boolean 
+  colorCode String maxlength(30)  
+  
+}
+
+
+ 
+ 
+ 
+ 
+ entity ShippingOrderAddSvc{
+ 
+ deliveryAppt Boolean 
+  satDelivery Boolean 
+  hold Boolean 
+  returnService Boolean 
+  insideDelivery Boolean 
+  insidePickup Boolean
+pierCharge Boolean 
+  sortSegregate Boolean
+docsOnly Boolean 
+dangerousGoods String maxlength(255) 
+signatureRequired Integer max(11)    
+  insuranceType Integer max(11)
+  insuredAmount Float
+  homelandSecurity Boolean 
+  saturdayPickup Boolean 
+  singleShipment Boolean 
+  crossBorderFee Boolean 
+  excessLength Boolean 
+  limitedAccess Boolean
+  customsFreight Boolean 
+  militaryBaseDelivery Boolean
+  inBondFee Boolean
+  exibitionSite Boolean
+ 
+ }
+ entity ShippingOrderCost {
+ 
+  baseCostToMf Float 
+  baseCostToF Float 
+  freightTariff Float 
+  baseCharge Float 
+  baseChargeSell Float 
+  fuelCostToMf Float 
+  fuelCostToF Float 
+  fuelSurcharge Float 
+  fuelSurchargeSell Float 
+  fuelTariff Float 
+  totalTariff Float 
+  totalCost Double 
+  totalCharge Double 
+  totalSellPrice Float 
+  grossProfitToF Double 
+  grossProfitToMf Double
+  totalCostFranchise Double 
+  totalCostMfFranchise Double 
+  actualBaseCharge Double
+  totalChargeUser Float 
+  totActWgt Float 
+  totActQuantity Integer max(11)
+ 
+ }
+  entity ShippingOrderCODService {
+  
+  codPayment String maxlength(255) 
+  codValue Float 
+  codCurrency String maxlength(255) 
+  codPayableTo String maxlength(255) 
+   
+  }
+ 
+ entity ShippingOrderBilling {
+  billingType Integer max(11) 
+  billingAccount String maxlength(255)   
+  billingPostalCode String maxlength(255) 
+  }
+ 
+ entity ShippingOrderMarkup {
+ customerMarkup Float 
+  customerMarkdown Float 
+  customerMarkupType Integer max(10)
+  originalMarkdownType Integer max(10)
+  franchiseMarkup Float
+
+}  
+
+entity ShippingOrderConfig {
+
+  canadianCustoms Boolean
+  isInsuranceManifested Boolean
+  transitDays Integer max(11) 
+  bolId String maxlength(250)   
+  originTerminal Integer max(20) 
+  destinationTerminal Integer max(20)   
+  terminalinfoLink String maxlength(500)   
+  inBondCargoControlNum String maxlength(45)
+  isShipmentReceivedAtCWW Boolean 
+  isBOLCreated Boolean 
+  isInsuranceEmailSendToUPIC Boolean    
+  isEcomShipment Integer max(20) 
+  isUseCustomCpAcct Boolean   
+  
+  }
+  entity ShippingOrderTracking {
+  
+  masterTrackingNum String maxlength(255) 
+  aramexPuroTrackingNum String maxlength(100) 
+  trackingUrl String maxlength(600) 
+  dateOfDelivery LocalDate 
+  proofOfDelivery String maxlength(255)    
+  hasBeenEdited Boolean 
+  referenceName String maxlength(255) 
+  reference2Name String maxlength(255) 
+  reference3Name String maxlength(255)
+  
+  
+}
+entity EcommerceOrders {
+  orderNumber Integer max(20)  
+  customerName String maxlength(255) 
+  domainName String maxlength(255) 
+  name String maxlength(255)
+  email String maxlength(255) 
+  createdAt LocalDate 
+  gateway String maxlength(255) 
+  totalPrice Double 
+  subtotalPrice Double 
+  totalWeight Double 
+  totalTax Double 
+  currency String maxlength(255) 
+  shippingLinesTitle String maxlength(255) 
+  lineItemInString String maxlength(1000)
+  fulfillmentStatus String maxlength(255)
+  financialStatus String maxlength(255)
+  createdDate LocalDate 
+  updatedBy String maxlength(255) 
+  isCancelled Boolean 
+  isShipped Boolean 
+  eshipperStatus String maxlength(255)  
+  residentialShippingAddress Boolean    
+  shippingOrderRef Integer max(20) 
+  fromEmail String maxlength(255) 
+  isCancelSchedule Boolean 
+  isSchedulePickup Boolean 
+} 
+
+entity EcomStore {
+  storeName String maxlength(900) 
+  cartId Integer max(10)    
+  dateCreated LocalDate 
+  enabled Boolean 
+  authToken String maxlength(900) 
+  lastOrderNumber Integer max(20) 
+  domainName String maxlength(100) 
+  shopifyDomain String maxlength(100) 
+}
+entity Surcharge {
+  name String maxlength(255) 
+  amount Double 
+  costToMf Double 
+  costToF Double 
+  sell Double 
+  position Integer max(11)  
+  description String maxlength(255) 
+  chargedAmount Float 
+  fuelAplcble Boolean    
+  chargedAmount Double 
+}
+
+entity SurchargeType {
+  
+  name String maxlength(45)
+} 
+entity Tab {
+  name String maxlength(255) 
+}
+entity EshipperUser {
+  
+  username String maxlength(255) 
+  password String maxlength(255) 
+  enabled Boolean 
+  dateCreated LocalDate 
+  phone String maxlength(255) 
+  fax String maxlength(255) 
+  email String maxlength(255) 
+  type String maxlength(255) 
+  subType String maxlength(255)   
+  deleted Boolean 
+  firstLoginComplete Boolean    
+  firstTimeLogin Boolean 
+  isVendor Boolean 
+  markup Float 
+  EsVersion String maxlength(255) 
+} 
+
+entity UserRestrictions {
+  shippingOrder Boolean 
+  fuelSurcharge Boolean 
+  quote Boolean 
+  userManagement Boolean 
+  operations Boolean 
+  defaultTab String maxlength(255) 
+  shipToFilter String maxlength(255) 
+  shipFromFilter String maxlength(255) 
+  salesPerson Boolean 
+  markupTable Boolean 
+  invoiceGen Boolean 
+  viewRates Boolean 
+  shareAddressBook Boolean 
+}
+entity AccountsPayableCategory {
+  catName String maxlength(255) 
+   
+}
+entity AccountsPayableCheque {
+  paymentDate LocalDate
+  curCode Integer max(11) 
+  chequeNumber String maxlength(255)   
+  wireTransNumber String maxlength(255) 
+  reference String maxlength(100) 
+}
+
+entity AccountsPayablePayables {
+  name String maxlength(255) 
+  paymentMethod String maxlength(10) 
+  disabled Boolean 
+  terms Integer max(3) 
+   
+}
+
+
+
+entity AccountsReceivableDetails {
+  position Integer max(11) 
+  recId Integer max(20)   
+  amountPaid Double 
+  recId Integer max(20) 
+  checkNum String maxlength(20) 
+  checkDate LocalDate 
+  reversed Boolean 
+}
+entity WoAgent {
+  contactName String maxlength(255) 
+  faxNumber String maxlength(255) 
+  otherNumber String maxlength(255) 
+  comments String maxlength(255) 
+  active Boolean 
+  
+}
+
+entity ApChequeTrans {
+  chequeId Integer max(20)
+  payId Integer max(20)
+}
+
+entity WoCharge {
+  invoiceNumber String maxlength(255) 
+  chargeId Integer max(20) 
+  unitValue Float
+  unitType String maxlength(255) 
+  rateUnit Float
+  totalValue Float
+  totalValueCharge Float
+  tariff Float 
+  name String maxlength(255) 
+  oid Integer max(20) 
+  applyCommission Boolean 
+}
+entity WoCommReport {
+   
+  dateCreated LocalDate 
+  curId Integer max(11) 
+  amount Double 
+  gstTax Double 
+  commStatus Integer max(11) 
+  totalOpExpense Double 
+  totalTranFee Double 
+  totalEsFee Double 
+  comment String maxlength(255) 
+  directReport Integer max(11) 
+}
+
+
+entity WoCreditNote {
+  dateCreated LocalDate 
+  amount Double 
+  comments String maxlength(255) 
+}
+entity WoDeliveryPreAlert {
+  dateCreated LocalDate 
+  agent String maxlength(255) 
+  agentContact String maxlength(255) 
+  agentPhone String maxlength(255) 
+  agentFax String maxlength(255) 
+  agentLocalDate LocalDate 
+  secondAgentUsed Boolean 
+  deliveryLocalDate LocalDate 
+  numberOfPieces Integer max(11) 
+  weight Float 
+  deliveryAddressId Integer max(20) 
+  handlingInformation String maxlength(255) 
+  specialInstructions String maxlength(255) 
+   
+}
+
+entity WoDocs {
+   
+  name String maxlength(50) 
+  fileName String maxlength(50) 
+  uploadFile Blob
+  privateMode Boolean 
+}
+
+entity EdiCharge {
+   
+  chargeName String maxlength(255) 
+  carrierChargeCode String maxlength(255)       
+  taxType Integer max(11) 
+  taxRate Float 
+}
+entity EdiChargeGroup {
+  groupName String maxlength(255) 
+  groupType Integer max(11) 
+  formulaRate Float 
+}
+
+entity EdiDetailAramex {
+  id Integer max(20) 
+  seqNumber Integer max(8) 
+  status Boolean 
+  processDate LocalDate 
+  invoiceId String maxlength(9) 
+  entityType String maxlength(30) 
+  productGroup String maxlength(3) 
+  chargeCode String maxlength(3) 
+  accountId String maxlength(6) 
+  transactionDate LocalDate 
+  hawbId String maxlength(9) 
+  awb String maxlength(10) 
+  documentId String maxlength(8) 
+  invoicingFrequency String maxlength(1) 
+  accountType String maxlength(1) 
+  teamId String maxlength(4) 
+  prepaidRangeId String maxlength(2) 
+  affectedEntity String maxlength(30)
+  currency String maxlength(3) 
+  prepaidAmount String maxlength(16) 
+  amount String maxlength(16) 
+  otherAmount1 String maxlength(16) 
+  otherAmount2 String maxlength(16) 
+  otherAmount3 String maxlength(16) 
+  otherAmount4 String maxlength(16) 
+  otherAmount5 String maxlength(16) 
+  cashValue String maxlength(16) 
+  additionalAmtDescription String maxlength(30) 
+  exchangeRate String maxlength(16) 
+  taxRate String maxlength(16) 
+  customs String maxlength(3) 
+  customsCurrency String maxlength(3) 
+  collectAmount String maxlength(16) 
+  collectCurrency String maxlength(3) 
+  orderStatus String maxlength(1) 
+  COMMENT String maxlength(30) 
+  calculatedOn String maxlength(10) 
+  rateSheetId String maxlength(6) 
+  rateSheetDetailsId String maxlength(7) 
+  tariffType String maxlength(1) 
+  settledBy String maxlength(20) 
+  settledDate String maxlength(10) 
+  trialDate String maxlength(10) 
+  shipperReference String maxlength(30) 
+  origin String maxlength(30) 
+  originLocationCode String maxlength(30) 
+  originCity String maxlength(30) 
+  originState String maxlength(30) 
+  originZipCode String maxlength(6) 
+  originCountry String maxlength(30) 
+  shipperNumber String maxlength(9) 
+  shipperName String maxlength(30) 
+  sentBy String maxlength(30) 
+  shipperAddress String maxlength(50) 
+  shipperTel String maxlength(11) 
+  shippeerFax String maxlength(11) 
+  destination String maxlength(3) 
+  destinationLocationCode String maxlength(30) 
+  consigneeReference String maxlength(30) 
+  comsigneeName String maxlength(30) 
+  attnOf String maxlength(30) 
+  consigneeAddress String maxlength(50) 
+  destCity String maxlength(30) 
+  destState String maxlength(30) 
+  destZipCode String maxlength(6) 
+  destCountry String maxlength(30) 
+  consigneeNumber String maxlength(9) 
+  TYPE String maxlength(3) 
+  services String maxlength(30) 
+  pickupDate String maxlength(10) 
+  weight String maxlength(3) 
+  actualWeight String maxlength(3) 
+  unit String maxlength(2) 
+  pieces String maxlength(3) 
+  payment String maxlength(1) 
+  paymentType String maxlength(4) 
+  thirdPartyNumber String maxlength(30) 
+  thirdPartyEntity String maxlength(30) 
+  sourceId String maxlength(2) 
+  route String maxlength(10) 
+  exEntity String maxlength(30) 
+  lineHauler String maxlength(4) 
+  beyondOrigin String maxlength(1) 
+  beyondDestination String maxlength(1) 
+  groupBy String maxlength(10) 
+  modifiedBy String maxlength(30) 
+  modifiedDate String maxlength(10) 
+  createdBy String maxlength(30) 
+  ts String maxlength(10) 
+  codValue String maxlength(1) 
+  codCurrency String maxlength(3) 
+  foreignHawbNumber String maxlength(9) 
+  CUBE String maxlength(6) 
+  cubeUnit String maxlength(3) 
+  remarks String maxlength(30) 
+  accountingInformation String maxlength(30) 
+  collectionReference String maxlength(30) 
+  shipperReference2 String maxlength(30) 
+  commodityDescription String maxlength(30) 
+  dueDate String maxlength(10) 
+  thirdPartyReference String maxlength(30) 
+  insuranceValue String maxlength(30) 
+  insuranceCurrency String maxlength(3) 
+  reference1 String maxlength(30) 
+  reference2 String maxlength(30) 
+  reference3 String maxlength(30) 
+  orderReference String maxlength(30) 
+  totalAmount String maxlength(16) 
+} 
+entity EdiDetailCanadapost {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  lineNumber String maxlength(10) 
+  recordType String maxlength(2) 
+  interfacSysDate String maxlength(20) 
+  custNumber String maxlength(10) 
+  custName String maxlength(40) 
+  custAddr1 String maxlength(40) 
+  custAddr2 String maxlength(40) 
+  custCity String maxlength(30) 
+  custProv String maxlength(2) 
+  custPcode String maxlength(10) 
+  docType String maxlength(10) 
+  invoiceNumber String maxlength(10) 
+  poNumber String maxlength(20) 
+  poDate String maxlength(10) 
+  custOrderRef String maxlength(20) 
+  costCenterRef String maxlength(30) 
+  indSiteName String maxlength(30) 
+  orderNumber String maxlength(10) 
+  dlvyNumber String maxlength(10) 
+  dlvyDate String maxlength(10) 
+  soldToCustNumber String maxlength(10) 
+  soldToCustName String maxlength(40) 
+  soldToCustId String maxlength(30) 
+  soldToCustAddr1 String maxlength(40) 
+  soldToCustAddr2 String maxlength(40) 
+  soldToCustCity String maxlength(30) 
+  soldToCustProv String maxlength(2) 
+  soldToCustPcode String maxlength(10) 
+  mailByCustNumber String maxlength(10) 
+  mailByCustName String maxlength(40) 
+  mailBehalfCustNo String maxlength(10) 
+  mailBehalfCustName String maxlength(40) 
+  shipToCustNo String maxlength(10) 
+  shipToCustName String maxlength(40) 
+  shipToCustAddr1 String maxlength(40) 
+  shipToCustAddr2 String maxlength(40) 
+  shipToCustCity String maxlength(30) 
+  shipToCustProv String maxlength(2) 
+  shipToCustPcode String maxlength(10) 
+  agreeNumber String maxlength(10) 
+  invoiceDate String maxlength(10) 
+  invoiceDueDate String maxlength(10) 
+  payTerms String maxlength(40) 
+  origInvoiceNo String maxlength(20) 
+  articleNo String maxlength(60) 
+  svcDesc String maxlength(40) 
+  productId String maxlength(40) 
+  addtnInfo1 String maxlength(80) 
+  addtnInfo2 String maxlength(80) 
+  futureUse1 String maxlength(20) 
+  quantityShipped String maxlength(20) 
+  wghtPerPiece String maxlength(20) 
+  pricePerPiece String maxlength(20) 
+  wghtPrice String maxlength(20) 
+  rateCode String maxlength(10) 
+  baseCharge String maxlength(20) 
+  quantityCod String maxlength(20) 
+  codCharge String maxlength(20) 
+  quantityAddCovrge String maxlength(20) 
+  addCovrgeCharge String maxlength(20) 
+  qntyDlvyConfirm String maxlength(20) 
+  dlvyConfirmCharge String maxlength(20) 
+  qntySignOption String maxlength(20) 
+  signOptionCharge String maxlength(20) 
+  qntyOvrSizeNotPkg String maxlength(20) 
+  ovrSizeNotPkgCharge String maxlength(20) 
+  qntyMailTube String maxlength(20) 
+  mailTubeCharge String maxlength(20) 
+  dlvyOptDesc String maxlength(20) 
+  qntyDlvy String maxlength(20) 
+  dlvyCharge String maxlength(20) 
+  qntyRegstrd String maxlength(20) 
+  regstrdCharge String maxlength(20) 
+  qntyMachnblty String maxlength(20) 
+  machnbltyCharge String maxlength(20) 
+  qntyTransptn String maxlength(20) 
+  transptnCharge String maxlength(20) 
+  qntyAddrAcurcy String maxlength(20) 
+  addrAcurcyPercntge String maxlength(10) 
+  addrAcurcyExpDate String maxlength(10) 
+  addrAcurcyCharge String maxlength(20) 
+  qntyPhntmSurcharge String maxlength(20) 
+  phntmSurcharge String maxlength(20) 
+  qntyAdvcRcpt String maxlength(20) 
+  advcRcptSurcharge String maxlength(20) 
+  qntyOcrAdjstmt String maxlength(20) 
+  ocrAdjstmtFee String maxlength(20) 
+  qntyFsmAdjstmt String maxlength(20) 
+  fsmAdjstmtFee String maxlength(20) 
+  emrgncyOrderFee String maxlength(20) 
+  restockFee String maxlength(20) 
+  minOrderFee String maxlength(20) 
+  onDmndPkpQnty String maxlength(20) 
+  onDmndPkpValue String maxlength(20) 
+  manSomOrdProcesFee String maxlength(20) 
+  autoDiscntRate String maxlength(20) 
+  autoDiscntValue String maxlength(20) 
+  fuelSurchargeRate String maxlength(20) 
+  papRegNumber String maxlength(20) 
+  qntySubsidy String maxlength(20) 
+  subsidyValue String maxlength(20) 
+  fuelSurchargeAmt String maxlength(20) 
+  adcardPerforatn String maxlength(20) 
+  adcardScratchWin String maxlength(20) 
+  futureUse4 String maxlength(20) 
+  adcardFifthColor String maxlength(20) 
+  adcardDiecut String maxlength(20) 
+  adcard10point String maxlength(20) 
+  adcard8point String maxlength(20) 
+  futureUse5 String maxlength(20) 
+  futureUse6 String maxlength(20) 
+  futureUse7 String maxlength(20) 
+  futureUse8 String maxlength(20) 
+  futureUse9 String maxlength(20) 
+  futureUse10 String maxlength(20) 
+  futureUse11 String maxlength(20) 
+  futureUse12 String maxlength(20) 
+  futureUse13 String maxlength(20) 
+  futureUse14 String maxlength(20) 
+  futureUse15 String maxlength(20) 
+  futureUse16 String maxlength(20) 
+  futureUse17 String maxlength(20) 
+  futureUse18 String maxlength(20) 
+  futureUse19 String maxlength(20) 
+  futureUse20 String maxlength(20) 
+  futureUse21 String maxlength(20) 
+  cntctDiscnt1Rate String maxlength(20) 
+  cntctDiscnt1Amt String maxlength(20) 
+  cntctDiscnt2Rate String maxlength(20) 
+  cntctDiscnt2Amt String maxlength(20) 
+  promotnlDiscnt1Rate String maxlength(20) 
+  promotnlDiscnt1Amt String maxlength(20) 
+  promotnlDiscnt2Rate String maxlength(20) 
+  promotnlDiscnt2Amt String maxlength(20) 
+  promotnlDiscnt3Rate String maxlength(20) 
+  promotnlDiscnt3Amt String maxlength(20) 
+  meteredAmt String maxlength(20) 
+  netCharge String maxlength(20) 
+  gstAmt String maxlength(20) 
+  hstAmt String maxlength(20) 
+  pstAmt String maxlength(20) 
+  gstHstTaxStatus String maxlength(30) 
+  psgTaxStatus String maxlength(30) 
+  payment String maxlength(20) 
+  totCharges String maxlength(20) 
+  provTaxCode String maxlength(2) 
+  msgBoxLop String maxlength(360) 
+}
+entity EdiDetailCanpar {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+}
+entity EdiDetailDhl {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  tradingPartnerId String maxlength(12) 
+  batchControlNum String maxlength(9) 
+  systemDate String maxlength(8) 
+  invoiceNum String maxlength(13) 
+  invoiceDate String maxlength(8) 
+  invoiceDueDate String maxlength(8) 
+  netDays String maxlength(3) 
+  paymentTerms String maxlength(2) 
+  invoiceTypeCode String maxlength(2) 
+  totalItemCount String maxlength(5) 
+  invoiceOpenAmount String maxlength(12) 
+  invoiceTotalFreightCharge String maxlength(12) 
+  invoiceTotalOtherCharges String maxlength(12) 
+  invoiceTotalAdjustment String maxlength(13) 
+  invoiceTotalPaidAmount String maxlength(13) 
+  invoiceBillingCurrencyCode String maxlength(3) 
+  invoicePaymentCurrencyCode String maxlength(3) 
+  invoiceTotalChargeableWeight String maxlength(9) 
+  invoiceTotalActualWeight String maxlength(9) 
+  invoiceUnitOfMeasurementWeight String maxlength(2) 
+  invoiceTotalPieceCount String maxlength(5) 
+  billToName String maxlength(25) 
+  billToNameExtension String maxlength(25) 
+  billToAddress1 String maxlength(25) 
+  billToAddress2 String maxlength(25) 
+  billToCity String maxlength(20) 
+  billToState String maxlength(2) 
+  billToZip String maxlength(9) 
+  billToCountryCode String maxlength(3) 
+  billToCustomerNumber String maxlength(11) 
+  billToAccountingControlData String maxlength(25) 
+  itemNumber String maxlength(11) 
+  billToCode String maxlength(1) 
+  itemOpenAmount String maxlength(12) 
+  shipmentTotalOtherCharges String maxlength(12) 
+  itemBillingCurrencyCode String maxlength(3) 
+  isoCurrencyCode String maxlength(3) 
+  exchangeRate String maxlength(11) 
+  nationalDiscountAmount String maxlength(12) 
+  consolCode String maxlength(2) 
+  consolRateMessageCode String maxlength(2) 
+  shipperName String maxlength(25) 
+  shipperNameExtension String maxlength(25) 
+  shipperAddress1 String maxlength(25) 
+  shipperAddress2 String maxlength(25) 
+  shipperCity String maxlength(20) 
+  shipperState String maxlength(2) 
+  shipperZip String maxlength(9) 
+  shipperCountryCode String maxlength(3) 
+  shipperNumber String maxlength(11) 
+  shipperReferenceNumber String maxlength(35) 
+  sentBy String maxlength(25) 
+  receiverName String maxlength(25) 
+  receiverNameExtension String maxlength(25) 
+  receiverAddress1 String maxlength(25) 
+  receiverAddress2 String maxlength(25) 
+  receiverCity String maxlength(20) 
+  receiverState String maxlength(2) 
+  receiverZip String maxlength(9) 
+  receiverCountryCode String maxlength(3) 
+  receiverNumber String maxlength(11) 
+  receiverReferenceNumber String maxlength(25) 
+  attentionOf String maxlength(25) 
+  shipmentAccountingControlData String maxlength(25) 
+  thirdPartyCustomerNumber String maxlength(11) 
+  consolToCustomerNumber String maxlength(11) 
+  pickUpLocation String maxlength(2) 
+  originStationCode String maxlength(3) 
+  destinationStationCode String maxlength(3) 
+  pickupDate String maxlength(8) 
+  pickupTime String maxlength(4) 
+  deliveryDate String maxlength(8) 
+  deliveryTime String maxlength(4) 
+  rcvSig String maxlength(25) 
+  delayReasonCode String maxlength(3) 
+  airbillTypeCode String maxlength(1) 
+  shipmentTypeCode String maxlength(1) 
+  serviceTypeCode String maxlength(2) 
+  dutiableShipmentCode String maxlength(1) 
+  serviceLevel String maxlength(2) 
+  freightDescription String maxlength(40) 
+  packageType String maxlength(1) 
+  chargeableWeight String maxlength(9) 
+  actualWeight String maxlength(9) 
+  dimensionalWeight String maxlength(9) 
+  shipmentUnitOfMeasurementWeight String maxlength(2) 
+  weightCode String maxlength(2) 
+  shipmentVolume String maxlength(7) 
+  shipmentUnitOfMeasurementVolume String maxlength(1) 
+  pieceCount String maxlength(5) 
+  scale String maxlength(7) 
+  priceZone String maxlength(2) 
+  freightRate String maxlength(10) 
+  freightChargeAmount String maxlength(11) 
+  valueAmount String maxlength(12) 
+  codAmount String maxlength(12) 
+  accessorialCharge01 String maxlength(12) 
+  accessorialCode01 String maxlength(3) 
+  accessorialDescription01 String maxlength(25) 
+  accessorialCharge02 String maxlength(12) 
+  accessorialCode02 String maxlength(3) 
+  accessorialDescription02 String maxlength(25) 
+  accessorialCharge03 String maxlength(12) 
+  accessorialCode03 String maxlength(3) 
+  accessorialDescription03 String maxlength(25) 
+  accessorialCharge04 String maxlength(12) 
+  accessorialCode04 String maxlength(3) 
+  accessorialDescription04 String maxlength(25) 
+  accessorialCharge05 String maxlength(12) 
+  accessorialCode05 String maxlength(3) 
+  accessorialDescription05 String maxlength(25) 
+  accessorialCharge06 String maxlength(12) 
+  accessorialCode06 String maxlength(3) 
+  accessorialDescription06 String maxlength(25) 
+  accessorialCharge07 String maxlength(12) 
+  accessorialCode07 String maxlength(3) 
+  accessorialDescription07 String maxlength(25) 
+  accessorialCharge08 String maxlength(12) 
+  accessorialCode08 String maxlength(3) 
+  accessorialDescription08 String maxlength(25) 
+  accessorialCharge09 String maxlength(12) 
+  accessorialCode09 String maxlength(3) 
+  accessorialDescription09 String maxlength(25) 
+  accessorialCharge10 String maxlength(12) 
+  accessorialCode10 String maxlength(3) 
+  accessorialDescription10 String maxlength(25) 
+  accessorialCharge11 String maxlength(12) 
+  accessorialCode11 String maxlength(3) 
+  accessorialDescription11 String maxlength(25) 
+  accessorialCharge12 String maxlength(12) 
+  accessorialCode12 String maxlength(3) 
+  accessorialDescription12 String maxlength(25) 
+  accessorialCharge13 String maxlength(12) 
+  accessorialCode13 String maxlength(3) 
+  accessorialDescription13 String maxlength(25) 
+  accessorialCharge14 String maxlength(12) 
+  accessorialCode14 String maxlength(3) 
+  accessorialDescription14 String maxlength(25) 
+  accessorialCharge15 String maxlength(12) 
+  accessorialCode15 String maxlength(3) 
+  accessorialDescription15 String maxlength(25) 
+  accessorialCharge16 String maxlength(12) 
+  accessorialCode16 String maxlength(3) 
+  accessorialDescription16 String maxlength(25) 
+  accessorialCharge17 String maxlength(12) 
+  accessorialCode17 String maxlength(3) 
+  accessorialDescription17 String maxlength(25) 
+  accessorialCharge18 String maxlength(12) 
+  accessorialCode18 String maxlength(3) 
+  accessorialDescription18 String maxlength(25) 
+  accessorialCharge19 String maxlength(12) 
+  accessorialCode19 String maxlength(3) 
+  accessorialDescription19 String maxlength(25) 
+  accessorialCharge20 String maxlength(12) 
+  accessorialCode20 String maxlength(3) 
+  accessorialDescription20 String maxlength(25) 
+  accessorialCharge21 String maxlength(12) 
+  accessorialCode21 String maxlength(3) 
+  accessorialDescription21 String maxlength(25) 
+  accessorialCharge22 String maxlength(12) 
+  accessorialCode22 String maxlength(3) 
+  accessorialDescription22 String maxlength(25) 
+  accessorialCharge23 String maxlength(12) 
+  accessorialCode23 String maxlength(3) 
+  accessorialDescription23 String maxlength(25) 
+  accessorialCharge24 String maxlength(12) 
+  accessorialCode24 String maxlength(3) 
+  accessorialDescription24 String maxlength(25) 
+  accessorialCharge25 String maxlength(12) 
+  accessorialCode25 String maxlength(3) 
+  accessorialDescription25 String maxlength(25) 
+  accessorialCharge26 String maxlength(12) 
+  accessorialCode26 String maxlength(3) 
+  accessorialDescription26 String maxlength(25) 
+  accessorialCharge27 String maxlength(12) 
+  accessorialCode27 String maxlength(3) 
+  accessorialDescription27 String maxlength(25) 
+  accessorialCharge28 String maxlength(12) 
+  accessorialCode28 String maxlength(3) 
+  accessorialDescription28 String maxlength(25) 
+  accessorialCharge29 String maxlength(12) 
+  accessorialCode29 String maxlength(3) 
+  accessorialDescription29 String maxlength(25) 
+  accessorialCharge30 String maxlength(12) 
+  accessorialCode30 String maxlength(3) 
+  accessorialDescription30 String maxlength(25) 
+  height1 String maxlength(3) 
+  length1 String maxlength(3) 
+  width1 String maxlength(3) 
+  pieceCount1 String maxlength(3) 
+  height2 String maxlength(3) 
+  length2 String maxlength(3) 
+  width2 String maxlength(3) 
+  pieceCount2 String maxlength(3) 
+  height3 String maxlength(3) 
+  length3 String maxlength(3) 
+  width3 String maxlength(3) 
+  pieceCount3 String maxlength(3) 
+  height4 String maxlength(3) 
+  length4 String maxlength(3) 
+  width4 String maxlength(3) 
+  pieceCount4 String maxlength(3) 
+  unitOfMeasurementDimensions String maxlength(1) 
+  consolData1 String maxlength(18) 
+  consolData2 String maxlength(18) 
+  consolData3 String maxlength(18) 
+  consolData4 String maxlength(18) 
+  consolData5 String maxlength(18) 
+  consolData6 String maxlength(18) 
+  consolData7 String maxlength(18) 
+  consolData8 String maxlength(18) 
+  assesseeName String maxlength(25) 
+  assesseeNameExtension String maxlength(25) 
+  assesseeAddress1 String maxlength(25) 
+  assesseeAddress2 String maxlength(25) 
+  assesseeCity String maxlength(20) 
+  assesseeState String maxlength(2) 
+  assesseeZip String maxlength(9) 
+  assesseeCountryCode String maxlength(3) 
+  assesseeNumber String maxlength(11) 
+  contactName String maxlength(25) 
+  feeAccountingControlData String maxlength(25) 
+  feeDate String maxlength(8) 
+  feeTypeCode String maxlength(3) 
+  feeDescription String maxlength(15) 
+  feeRate String maxlength(6) 
+  feeCalculationCode String maxlength(2) 
+  feeBasisAmount String maxlength(14) 
+  feeBasisCount String maxlength(13) 
+  feeBeginningDate String maxlength(8) 
+  feeEndDate String maxlength(8) 
+  feePeriod String maxlength(1) 
+  feeText1 String maxlength(50) 
+  feeText2 String maxlength(50) 
+  feeText3 String maxlength(50) 
+  feeText4 String maxlength(50) 
+  feeText5 String maxlength(50) 
+  feeText6 String maxlength(50) 
+  feeText7 String maxlength(50) 
+  feeText8 String maxlength(50) 
+  feeText9 String maxlength(50) 
+  feeText10 String maxlength(50) 
+  feeText11 String maxlength(50) 
+  feeText12 String maxlength(50) 
+  feeText13 String maxlength(50) 
+  feeText14 String maxlength(50) 
+  feeText15 String maxlength(50) 
+  feeText16 String maxlength(50) 
+  feeText17 String maxlength(50) 
+  feeText18 String maxlength(50) 
+  feeText19 String maxlength(50) 
+  feeText20 String maxlength(50) 
+  itemTotalAdjustment String maxlength(13) 
+  itemTotalPaidAmount String maxlength(13) 
+}
+entity EdiDetailDhlEc {
+  seqNumber Integer max(8) 
+  STATUS Boolean
+  processDate LocalDate 
+  recordType String maxlength(5) 
+  soldTo String maxlength(50) 
+  inventoryPositioner String maxlength(50) 
+  bolNumber String maxlength(50) 
+  billingRef String maxlength(100) 
+  billlingRef2 String maxlength(100) 
+  processingFacility String maxlength(10) 
+  pickupFrom String maxlength(15) 
+  pickupDate String maxlength(10) 
+  pickupTime String maxlength(10) 
+  internalTracking String maxlength(50) 
+  customerConfirm String maxlength(50) 
+  deliveryConfirm String maxlength(50) 
+  recipientName String maxlength(50) 
+  recipientAddress1 String maxlength(120) 
+  recipientAddress2 String maxlength(120) 
+  recipientCity String maxlength(120) 
+  recipientState String maxlength(50) 
+  recipientZip String maxlength(50) 
+  recipientCountry String maxlength(10) 
+  materialOrVasNum String maxlength(50) 
+  materialOrVasDesc String maxlength(50) 
+  actualWeight String maxlength(15) 
+  uomActualWeight String maxlength(15) 
+  billingWeight String maxlength(15) 
+  uomBillingWeight String maxlength(15) 
+  quantity String maxlength(15) 
+  uomQuantity String maxlength(15) 
+  pricingZone String maxlength(15) 
+  charge String maxlength(15) 
+  custReference1 String maxlength(100) 
+  custReference2 String maxlength(100) 
+  workshareDropoff String maxlength(15) 
+  workshareSort String maxlength(15) 
+  workshareStamp String maxlength(15) 
+  workshareMachine String maxlength(15) 
+  workshareManifest String maxlength(15) 
+  workshareBpm String maxlength(15) 
+  workshareFutureUse1 String maxlength(15) 
+  workshareFutureUse2 String maxlength(15) 
+  workshareFutureUse3 String maxlength(15) 
+  surchargeContentEndorse String maxlength(15) 
+  surchargeUnassignableAdd String maxlength(15) 
+  surchargeSpecialHandling String maxlength(15) 
+  surchargeLateArrival String maxlength(15) 
+  surchargeUspsQualif String maxlength(15) 
+  surchargeClientSrd String maxlength(15) 
+  surchargeIrregular String maxlength(15) 
+  returnedMailUnassignable String maxlength(15) 
+  returnedMailUnprocessable String maxlength(15) 
+  returnedMailRecall String maxlength(15) 
+  returnedMailDuplicate String maxlength(15) 
+  returnedMailContAssur String maxlength(15) 
+  returnedMailMoveUpdate String maxlength(15) 
+  returnedMailGstTax String maxlength(15) 
+  returnedMailHstTax String maxlength(15) 
+  returnedMailPstTax String maxlength(15) 
+  returnedMailVatTax String maxlength(15) 
+  returnedMailDuties String maxlength(15) 
+  returnedMailTax String maxlength(15) 
+  returnedMailPaperInvoice String maxlength(15) 
+  returnedMailScreening String maxlength(15) 
+  returnedMailNonAutoFlats String maxlength(15) 
+  returnedMailFutureUse String maxlength(15) 
+  surchargeFuel String maxlength(15) 
+  minPickupCharge String maxlength(15) 
+  reservedFutureUse1 String maxlength(50) 
+  reservedFutureUse2 String maxlength(50) 
+  reservedFutureUse3 String maxlength(50) 
+  reservedFutureUse4 String maxlength(50) 
+  reservedFutureUse5 String maxlength(50) 
+  reservedFutureUse6 String maxlength(50) 
+  reservedFutureUse7 String maxlength(50) 
+  reservedFutureUse8 String maxlength(50) 
+  reservedFutureUse9 String maxlength(50) 
+  reservedFutureUse10 String maxlength(50) 
+  reservedFutureUse11 String maxlength(50) 
+  reservedFutureUse12 String maxlength(50) 
+  reservedFutureUse13 String maxlength(50) 
+}
+entity EdiDetailFedex {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  masterEdiNo String maxlength(9) 
+  invoiceNumber String maxlength(9) 
+  invoiceDate String maxlength(8) 
+  type String maxlength(1) 
+  settle String maxlength(1) 
+  invCharge String maxlength(16) 
+  transCnt String maxlength(5) 
+  billToAccount String maxlength(9) 
+  cntry String maxlength(2) 
+  notApplicable String maxlength(1) 
+  consolidatedAcct String maxlength(9) 
+  coCd String maxlength(1) 
+  grdPrefix String maxlength(8) 
+  trackingNumber String maxlength(12) 
+  rebill String maxlength(1) 
+  nonDup String maxlength(1) 
+  shipDate String maxlength(8) 
+  svc String maxlength(2) 
+  pkg String maxlength(2) 
+  grdSvc String maxlength(3) 
+  ipdAdr String maxlength(5) 
+  msgCd String maxlength(5) 
+  ref1 String maxlength(24) 
+  ref2 String maxlength(24) 
+  ref3 String maxlength(24) 
+  storeNo String maxlength(10) 
+  grdPoNo String maxlength(30) 
+  grdDeptNo String maxlength(25) 
+  custInvNo String maxlength(25) 
+  rmaNo String maxlength(20) 
+  deviceNo String maxlength(7) 
+  device String maxlength(5) 
+  payor String maxlength(1) 
+  netChrg String maxlength(16) 
+  curr String maxlength(3) 
+  chrg1 String maxlength(3) 
+  freightAmt String maxlength(16) 
+  chrg2 String maxlength(3) 
+  volDiscAmt String maxlength(16) 
+  chrg3 String maxlength(3) 
+  earnedDiscAmt String maxlength(16) 
+  chrg4 String maxlength(3) 
+  autoDiscAmt String maxlength(16) 
+  chrg5 String maxlength(3) 
+  perfPriceAmt String maxlength(16) 
+  chrg6 String maxlength(3) 
+  fuelAmt String maxlength(16) 
+  chrg7 String maxlength(3) 
+  resiAmt String maxlength(16) 
+  chrg8 String maxlength(3) 
+  dasAmt String maxlength(16) 
+  chrg9 String maxlength(3) 
+  onCallAmt String maxlength(16) 
+  chrg10 String maxlength(3) 
+  dVAmt String maxlength(16) 
+  chrg11 String maxlength(3) 
+  signSvcAmt String maxlength(16) 
+  chrg12 String maxlength(3) 
+  satAmt String maxlength(16) 
+  chrg13 String maxlength(3) 
+  addnHndlgAmt String maxlength(16) 
+  chrg14 String maxlength(3) 
+  adrCorrAmt String maxlength(16) 
+  chrg15 String maxlength(3) 
+  gstAmt String maxlength(16) 
+  chrg16 String maxlength(3) 
+  dutyAmt String maxlength(16) 
+  chrg17 String maxlength(3) 
+  advFeeAmt String maxlength(16) 
+  chrg18 String maxlength(3) 
+  origVatAmt String maxlength(16) 
+  chrg19 String maxlength(3) 
+  misc1Amt String maxlength(16) 
+  chrg20 String maxlength(3) 
+  misc2Amt String maxlength(16) 
+  chrg21 String maxlength(3) 
+  misc3Amt String maxlength(16) 
+  exchgRate String maxlength(19) 
+  excCurr String maxlength(3) 
+  fuelPct String maxlength(5) 
+  euBd String maxlength(2) 
+  cLCnt String maxlength(5) 
+  callTag String maxlength(1) 
+  decValue String maxlength(16) 
+  customs String maxlength(16) 
+  cusCurr String maxlength(3) 
+  entryNo String maxlength(15) 
+  bundleNo String maxlength(9) 
+  scale String maxlength(7) 
+  pcs String maxlength(5) 
+  billWt String maxlength(8) 
+  origWt String maxlength(8) 
+  multiWt String maxlength(9) 
+  wtUnit String maxlength(1) 
+  length String maxlength(3) 
+  width String maxlength(3) 
+  height String maxlength(3) 
+  dimUnit String maxlength(1) 
+  divisor String maxlength(3) 
+  grdMisc1 String maxlength(3) 
+  grdMisc2 String maxlength(3) 
+  grdMisc3 String maxlength(3) 
+  shipperName String maxlength(30) 
+  shipperCompany String maxlength(30) 
+  shipperDept String maxlength(25) 
+  shipperAddress1 String maxlength(30) 
+  shipperAddress2 String maxlength(30) 
+  shipperCity String maxlength(30) 
+  st String maxlength(2) 
+  postal String maxlength(10) 
+  usOrigin String maxlength(3) 
+  cntry1 String maxlength(2) 
+  region String maxlength(2) 
+  recipientName String maxlength(30) 
+  recipientCompany String maxlength(30) 
+  recipientAddress1 String maxlength(30) 
+  recipientAddress2 String maxlength(30) 
+  recipientCity String maxlength(30) 
+  st2 String maxlength(2) 
+  postal2 String maxlength(10) 
+  cntry2 String maxlength(2) 
+  hndlg String maxlength(1) 
+  dlvryDate String maxlength(8) 
+  time String maxlength(4) 
+  finalValue String maxlength(2) 
+  exceptn String maxlength(2) 
+  attemptDate String maxlength(8) 
+  attemptTime String maxlength(4) 
+  signature String maxlength(22) 
+  svcArea String maxlength(2) 
+  codAmt String maxlength(16) 
+  codTrkgNo String maxlength(12) 
+  pdue String maxlength(1) 
+  pdueInv String maxlength(9) 
+  svcPct String maxlength(3) 
+  threshold String maxlength(16) 
+  origRecipAdr1 String maxlength(30) 
+  origRecipAdr2 String maxlength(30) 
+  originalCity String maxlength(30) 
+  st3 String maxlength(2) 
+  postal3 String maxlength(10) 
+  euVatNo String maxlength(25) 
+}
+
+entity EdiDetailOrangeds {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+}
+entity EdiDetailPuro {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  vipDtlType String maxlength(4) 
+  vipDtlRecType String maxlength(1) 
+  vipDtlBlNo String maxlength(12) 
+  vipDtlServDate String maxlength(6) 
+  vipDtlFromCity String maxlength(20) 
+  vipDtlFromProv String maxlength(4) 
+  vipDtlFromPostCode String maxlength(6) 
+  vipDtlToCity String maxlength(20) 
+  vipDtlToProv String maxlength(4) 
+  vipDtlToPostCode String maxlength(6) 
+  vipDtlPieces String maxlength(3) 
+  vipDtlWt String maxlength(5) 
+  vipDtlWtUnits String maxlength(1) 
+  vipDtlAmt String maxlength(7) 
+  vipDtlCollect String maxlength(7) 
+  vipDtl900am String maxlength(7) 
+  vipDtlBeyond String maxlength(7) 
+  vipDtlAccountNoChg String maxlength(7) 
+  vipDtlNonPackSrch String maxlength(7) 
+  vipDtlInsurance String maxlength(7) 
+  vipDtlFuelSurcharge String maxlength(7) 
+  vipDtlDangr String maxlength(7) 
+  vipDtlQuicks String maxlength(7) 
+  vipDtlGst String maxlength(7) 
+  vipDtlIncompleteAddress String maxlength(7) 
+  vipDtlCosSurch String maxlength(7) 
+  vipDtlPcFlag String maxlength(1) 
+  vipDtlParcelLength String maxlength(4) 
+  vipDtlParcelWidth String maxlength(4) 
+  vipDtlParcelHeight String maxlength(4) 
+  vipDtlWeekender String maxlength(7) 
+  vipDtlNonPackPieces String maxlength(3) 
+  vipDtlServType String maxlength(1) 
+  vipDtlReference String maxlength(15) 
+  vipDtlProduct String maxlength(4) 
+  vipDtlTransCode String maxlength(1) 
+  vipDtlPst String maxlength(7) 
+  vipDtlAod String maxlength(7) 
+  vipDtlPod String maxlength(7) 
+  vipDtlPurotherm String maxlength(7) 
+  vipDtlEco String maxlength(7) 
+  vipDtlConsolPin String maxlength(12) 
+  vipDtlConsolCity String maxlength(12) 
+  vipDtlConsolProv String maxlength(4) 
+  vipDtlWeight8 String maxlength(8) 
+  vipDtlConsolShip String maxlength(5) 
+  vipDtlSenderName String maxlength(30) 
+  vipDtlSenderAddr String maxlength(30) 
+  vipDtlSenderUnit String maxlength(4) 
+  vipDtlReceiverName String maxlength(30) 
+  vipDtlReceiverAddr String maxlength(30) 
+  vipDtlReceiverUnit String maxlength(4) 
+}
+
+entity EdiDetailUps {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  version String maxlength(3) 
+  recipientNumber String maxlength(10) 
+  accountNumber String maxlength(10) 
+  accountCountry String maxlength(2) 
+  invoiceDate String maxlength(10) 
+  invoiceNumber String maxlength(20) 
+  invTypeCode String maxlength(1) 
+  invTypeDetailCode String maxlength(2) 
+  accountTaxId String maxlength(25) 
+  invCurCode String maxlength(3) 
+  invoiceAmount String maxlength(17) 
+  transDate String maxlength(10) 
+  pickupRecNumber String maxlength(10) 
+  leadShipmentNumber String maxlength(26) 
+  worldEaseNumber String maxlength(26) 
+  shipmentRefNumber1 String maxlength(35) 
+  shipmentRefNumber2 String maxlength(35) 
+  billOptionCode String maxlength(3) 
+  packageQuantity String maxlength(8) 
+  oversizeQuantity String maxlength(7) 
+  trackingNumber String maxlength(26) 
+  packageRefNumber1 String maxlength(35) 
+  packageRefNumber2 String maxlength(35) 
+  packageRefNumber3 String maxlength(35) 
+  packageRefNumber4 String maxlength(35) 
+  packageRefNumber5 String maxlength(35) 
+  enteredWeight String maxlength(10) 
+  enteredWeightUnitMeasure String maxlength(1) 
+  billedWeight String maxlength(10) 
+  billedWeightUnitMeasure String maxlength(1) 
+  containerType String maxlength(3) 
+  billedWeightType String maxlength(2) 
+  packageDim String maxlength(17) 
+  zone String maxlength(3) 
+  chargeCatCode String maxlength(3) 
+  chargeCatDetCode String maxlength(4) 
+  chargeSource String maxlength(5) 
+  typeCode1 String maxlength(2) 
+  typeDetCode1 String maxlength(35) 
+  typeDetValue1 String maxlength(10) 
+  typeCode2 String maxlength(2) 
+  typeDetCode2 String maxlength(35) 
+  typeDetValue2 String maxlength(10) 
+  chargeClassCode String maxlength(3) 
+  chargeDescCode String maxlength(5) 
+  chargeDesc String maxlength(100) 
+  chargedUnitQuantity String maxlength(7) 
+  basisCurCode String maxlength(3) 
+  basisValue String maxlength(17) 
+  taxIndicator String maxlength(1) 
+  transCurCode String maxlength(3) 
+  incentiveAmount String maxlength(17) 
+  netAmount String maxlength(17) 
+  miscCurCode String maxlength(3) 
+  miscIncentiveAmount String maxlength(17) 
+  miscNet String maxlength(17) 
+  altInvCurCode String maxlength(3) 
+  altInvAmount String maxlength(17) 
+  invXchgRate String maxlength(17) 
+  taxVarAmount String maxlength(17) 
+  curVar String maxlength(17) 
+  invLevelCharge String maxlength(17) 
+  invDueDate String maxlength(10) 
+  altInvNumber String maxlength(15) 
+  storeNumber String maxlength(6) 
+  customerRefNumber String maxlength(19) 
+  senderName String maxlength(50) 
+  senderCompName String maxlength(50) 
+  senderAddr1 String maxlength(50) 
+  senderAddr2 String maxlength(50) 
+  senderCity String maxlength(50) 
+  senderState String maxlength(30) 
+  senderPostal String maxlength(12) 
+  senderCountry String maxlength(2) 
+  receiverName String maxlength(50) 
+  receiverCompName String maxlength(50) 
+  receiverAddr1 String maxlength(50) 
+  receiverAddr2 String maxlength(50) 
+  receiverCity String maxlength(50) 
+  receiverState String maxlength(30) 
+  receiverPostal String maxlength(12) 
+  receiverCountry String maxlength(2) 
+  thirdPartyName String maxlength(50) 
+  thirdPartyCompany String maxlength(50) 
+  thirdPartyAddr1 String maxlength(50) 
+  thirdPartyAddr2 String maxlength(50) 
+  thirdPartyCity String maxlength(50) 
+  thirdPartyState String maxlength(30) 
+  thirdPartyPostal String maxlength(12) 
+  thirdPartyCountry String maxlength(2) 
+  soldToName String maxlength(50) 
+  soldToCompName String maxlength(50) 
+  soldToAddr1 String maxlength(50) 
+  soldToAddr2 String maxlength(50) 
+  soldToCity String maxlength(50) 
+  soldToState String maxlength(30) 
+  soldToPostal String maxlength(12) 
+  soldToCountry String maxlength(2) 
+  miscAddrQual1 String maxlength(1) 
+  miscAddr1Name String maxlength(50) 
+  miscAddr1CompName String maxlength(50) 
+  miscAddr1Addr1 String maxlength(50) 
+  miscAddr1Addr2 String maxlength(50) 
+  miscAddr1City String maxlength(50) 
+  miscAddr1State String maxlength(30) 
+  miscAddr1Postal String maxlength(12) 
+  miscAddr1Country String maxlength(2) 
+  miscAddrQual2 String maxlength(1) 
+  miscAddr2Name String maxlength(50) 
+  miscAddr2CompName String maxlength(50) 
+  miscAddr2Addr1 String maxlength(50) 
+  miscAddr2Addr2 String maxlength(50) 
+  miscAddr2City String maxlength(50) 
+  miscAddr2State String maxlength(30) 
+  miscAddr2Postal String maxlength(12) 
+  miscAddr2Country String maxlength(2) 
+  shipmentDate String maxlength(10) 
+  shipmentExportDate String maxlength(10) 
+  shipmentImportDate String maxlength(10) 
+  entryDate String maxlength(10) 
+  directShipDate String maxlength(10) 
+  shipDlvryDate String maxlength(50) 
+  shpipRelseDate String maxlength(10) 
+  cycleDate String maxlength(50) 
+  eftDate String maxlength(50) 
+  valDate String maxlength(50) 
+  entryPort String maxlength(4) 
+  entryNumber String maxlength(50) 
+  exportPlace String maxlength(2) 
+  shipValueAmount String maxlength(17) 
+  shipDesc String maxlength(50) 
+  enteredCurCode String maxlength(3) 
+  customsNumber String maxlength(20) 
+  xchgeRate String maxlength(15) 
+  masterAirWaybillNo String maxlength(50) 
+  epu String maxlength(50) 
+  entryType String maxlength(50) 
+  cpcCode String maxlength(50) 
+  lineItemNo String maxlength(5) 
+  goodsDesc String maxlength(35) 
+  enteredValue String maxlength(17) 
+  dutyAmount String maxlength(17) 
+  weight String maxlength(10) 
+  unitOfMeasure String maxlength(10) 
+  itemQuantity String maxlength(5) 
+  itemQuanUnitMeasure String maxlength(14) 
+  importTaxId String maxlength(14) 
+  decNumber String maxlength(50) 
+  carrierName String maxlength(50) 
+  cccdNumber String maxlength(11) 
+  cycleNumber String maxlength(50) 
+  forgnTrdRefNumber String maxlength(50) 
+  jobNumber String maxlength(50) 
+  transMode String maxlength(4) 
+  taxType String maxlength(2) 
+  tariffCode String maxlength(50) 
+  tariffRate String maxlength(15) 
+  tariffTreatNumber String maxlength(11) 
+  contactName String maxlength(50) 
+  classNumber String maxlength(15) 
+  docType String maxlength(50) 
+  officeNumber String maxlength(50) 
+  docNumber String maxlength(50) 
+  dutyValue String maxlength(17) 
+  totValueOfDuty String maxlength(17) 
+  exciseTaxAmount String maxlength(17) 
+  exciseTaxRate String maxlength(15) 
+  gstAmount String maxlength(17) 
+  gstRate String maxlength(15) 
+  orderInCouncil String maxlength(16) 
+  originCountry String maxlength(2) 
+  simaAccess String maxlength(17) 
+  taxValue String maxlength(17) 
+  totCustomsAmt String maxlength(17) 
+  miscLn1 String maxlength(50) 
+  miscLn2 String maxlength(50) 
+  miscLn3 String maxlength(50) 
+  miscLn4 String maxlength(50) 
+  miscLn5 String maxlength(50) 
+  payerRoleCode String maxlength(2) 
+  miscLn7 String maxlength(50) 
+  miscLn8 String maxlength(50) 
+  miscLn9 String maxlength(50) 
+  miscLn10 String maxlength(58) 
+  miscLn11 String maxlength(91) 
+  dutyRate String maxlength(15) 
+  VATBasisAmt String maxlength(17) 
+  VATAmt String maxlength(17) 
+  VATRate String maxlength(15) 
+  othBasisAmt String maxlength(17) 
+  othAmt String maxlength(17) 
+  othRate String maxlength(15) 
+  othCusNumInd String maxlength(1) 
+  othCusNum String maxlength(35) 
+  cusOffName String maxlength(15) 
+  pkgDimUnitMeas String maxlength(1) 
+  orgShipPkgQnty String maxlength(10) 
+  placeHold24 String maxlength(50) 
+  placeHold25 String maxlength(50) 
+  placeHold26 String maxlength(4) 
+  placeHold27 String maxlength(50) 
+  placeHold28 String maxlength(50) 
+  placeHold29 String maxlength(50) 
+  placeHold30 String maxlength(50) 
+  placeHold31 String maxlength(50) 
+  bol1 String maxlength(20) 
+  bol2 String maxlength(20) 
+  bol3 String maxlength(20) 
+  bol4 String maxlength(20) 
+  bol5 String maxlength(20) 
+  po1 String maxlength(20) 
+  po2 String maxlength(20) 
+  po3 String maxlength(20) 
+  po4 String maxlength(20) 
+  po5 String maxlength(20) 
+  po6 String maxlength(20) 
+  po7 String maxlength(20) 
+  po8 String maxlength(20) 
+  po9 String maxlength(20) 
+  po10 String maxlength(20) 
+  nmfc String maxlength(20) 
+  detClass String maxlength(4) 
+  freightSeqNo String maxlength(4) 
+  decFreightCls String maxlength(4) 
+  placeHold34 String maxlength(50) 
+  placeHold35 String maxlength(50) 
+  placeHold36 String maxlength(50) 
+  placeHold37 String maxlength(50) 
+  placeHold38 String maxlength(50) 
+  placeHold39 String maxlength(50) 
+  placeHold40 String maxlength(50) 
+  placeHold41 String maxlength(50) 
+  placeHold42 String maxlength(50) 
+  placeHold43 String maxlength(50) 
+  placeHold44 String maxlength(50) 
+  placeHold45 String maxlength(50) 
+  placeHold46 String maxlength(50) 
+  placeHold47 String maxlength(50) 
+  placeHold48 String maxlength(50) 
+  placeHold49 String maxlength(50) 
+  placeHold50 String maxlength(50) 
+  placeHold51 String maxlength(50) 
+  placeHold52 String maxlength(50) 
+  placeHold53 String maxlength(50) 
+  placeHold54 String maxlength(50) 
+  placeHold55 String maxlength(50) 
+  placeHold56 String maxlength(50) 
+  placeHold57 String maxlength(50) 
+  placeHold58 String maxlength(50) 
+  placeHold59 String maxlength(50) 
+}
+entity EdiDetailUpsUsa {
+  seqNumber Integer max(8) 
+  status Boolean
+  processDate LocalDate 
+  airbill String maxlength(26) 
+  invoice String maxlength(20) 
+  billType String maxlength(3) 
+  shipDate String maxlength(10) 
+  customer String maxlength(19) 
+  shipperName String maxlength(50) 
+  shipperAddress1 String maxlength(50) 
+  shipperAddress2 String maxlength(50) 
+  shipperCity String maxlength(50) 
+  shipperState String maxlength(30) 
+  shipperZip String maxlength(12) 
+  receiverName String maxlength(50) 
+  receiverAddress1 String maxlength(50) 
+  receiverAddress2 String maxlength(50) 
+  receiverCity String maxlength(50) 
+  receiverState String maxlength(30) 
+  receiverZip String maxlength(12) 
+  customerName String maxlength(50) 
+  customerAddress1 String maxlength(50) 
+  customerAddress2 String maxlength(50) 
+  customerCity String maxlength(50) 
+  customerState String maxlength(30) 
+  customerZip String maxlength(12) 
+  pieces String maxlength(8) 
+  originalWeight String maxlength(10) 
+  chargedWeight String maxlength(10) 
+  chargeType1 String maxlength(50) 
+  chargeAmount1 String maxlength(17) 
+  chargeType2 String maxlength(5) 
+  chargeAmount2 String maxlength(17) 
+  chargeType3 String maxlength(5) 
+  chargeAmount3 String maxlength(17) 
+  chargeType4 String maxlength(5) 
+  chargeAmount4 String maxlength(17) 
+  chargeType5 String maxlength(5) 
+  chargeAmount5 String maxlength(17) 
+  chargeType6 String maxlength(5) 
+  chargeAmount6 String maxlength(17) 
+  chargeType7 String maxlength(5) 
+  chargeAmount7 String maxlength(17) 
+  chargeType8 String maxlength(5) 
+  chargeAmount8 String maxlength(17) 
+  chargeTotal String maxlength(17) 
+  listPrice String maxlength(17) 
+  invoiceDate String maxlength(10) 
+  billingReference String maxlength(35) 
+  billingReference2 String maxlength(35) 
+  sentBy String maxlength(50) 
+  zone String maxlength(3) 
+  originDest String maxlength(10) 
+  youOweAs String maxlength(20) 
+  desc1 String maxlength(50) 
+  desc2 String maxlength(50) 
+  desc3 String maxlength(50) 
+  desc4 String maxlength(50) 
+  pickupLocation String maxlength(10) 
+  senderNumber String maxlength(10) 
+  receiverNumber String maxlength(10) 
+  receiverLine1 String maxlength(50) 
+  receiverLine2 String maxlength(50) 
+  packageReference1 String maxlength(35) 
+  packageReference2 String maxlength(35) 
+  packageReference3 String maxlength(35) 
+  packageReference4 String maxlength(35) 
+  packageReference5 String maxlength(35) 
+  packageReference6 String maxlength(35) 
+  packageReference7 String maxlength(35) 
+  packageReference8 String maxlength(35) 
+  ups String maxlength(10) 
+}
+entity EdiHeader {
+  carrierType Boolean
+  invoiceNumber String maxlength(20) 
+  invoiceDate LocalDate 
+  processedDate LocalDate 
+  totInvoiceAmount Double 
+  mergedCount Integer max(8) 
+  detailSeqNumber Integer max(8) 
+  ediFileName String maxlength(50) 
+  status Boolean 
+  message String maxlength(255) 
+  accountNumber String maxlength(255)    
+  elapsedTime Integer max(20) 
+  released Boolean 
+}
+entity EdiService {
+   
+  serviceName String maxlength(255) 
+  serviceCode String maxlength(255) 
+  markup Float 
+}
+entity EdiShippingOrder {
+  
+  invoiceNumber String maxlength(255) 
+  invoiceDate LocalDate 
+  chargedWeight Float 
+  actualWeight Float     
+  markupPerc Float 
+  markupType Integer max(10) 
+  serviceName String maxlength(255) 
+  packageTypeName String maxlength(255)   
+  masterTrackingNum String maxlength(255) 
+  adjustment Float 
+  parentEdiwoId Integer max(20) 
+  description String maxlength(255) 
+ 
+}
+
+entity WoInvoice {
+  invoicePrefix String maxlength(10)   
+  dateCreated LocalDate 
+  datePaid LocalDate 
+  curId Integer max(11) 
+  amount Double 
+  amountFreight Double 
+  amountFuel Double 
+  amountOther Double 
+  tax Double 
+  paidAmount Double 
+  cost Double 
+  gstTax Double 
+  hstTax Double 
+  hstOnTax Double 
+  hstBcTax Double 
+  hstNbTax Double 
+  hstNsTax Double 
+  hstNlTax Double 
+  pstTax Double 
+  qstTax Double 
+  otherTaxes Double 
+  adjustment Double 
+  paymentStatus Integer max(11) 
+  paymentType Integer max(11) 
+  discount Double   
+  usFedTax Double 
+  usStateTax Double 
+  dueDate LocalDate 
+  modifiedDueDate LocalDate 
+}
+
+entity WoJobType {
+  name String maxlength(255)
+}
+entity WoOrderStatus {
+  name String maxlength(255) 
+}
+entity WoOrders {
+  invoiceNumber String maxlength(255) 
+  dateCreated LocalDate
+  status Integer max(11)   
+  shipDate LocalDate
+  type Integer max(11)
+  subType Integer max(10)
+  curCode Integer max(11) 
+  commStatus Integer max(11) 
+  jobNumber String maxlength(255)    
+  isFromMfToF Boolean 
+  notes1 String maxlength(255) 
+  notes2 String maxlength(255) 
+  notes3 String maxlength(255) 
+  notes4 String maxlength(255) 
+  paymentTypeId Boolean    
+  tranFee Double 
+  operatingCost Double 
+  affiliateFee Double 
+  commAmount Double 
+  creator Integer max(20) 
+}
+
+
+entity WoPackage {
+   
+  description String maxlength(255) 
+  length Integer max(11) 
+  width Integer max(11) 
+  height Integer max(11) 
+  weight Integer max(11) 
+  cubedWeight Integer max(11) 
+  trackingNumber String maxlength(255) 
+  codValue Double 
+  insuranceAmount Double 
+  oid Integer max(20) 
+  position Integer max(11) 
+  freightClass String maxlength(10) 
+  type String maxlength(255) 
+}
+entity WoSalesAgent {
+  
+  agentName String maxlength(255) 
+  commissionPercent Float 
+  promoCode String maxlength(255) 
+  deleted Boolean 
+  parentSalesAgentId Integer max(20) 
+  opExpense Integer max(10)
+  insideAgent Integer max(20) 
+}
+entity WoService {
+  name String maxlength(255) 
+  
+}
+entity WoStatusMessage {
+  
+  messageText String maxlength(255) 
+}
+entity WoSubservice {
+  
+  name String maxlength(255) 
+  description String maxlength(255) 
+  chargeType Integer max(11) 
+  chargeValue Float 
+  chargeQuantity Integer max(11) 
+  chargeUnit String maxlength(255) 
+  costValue Float 
+  commissionable Boolean 
+  applyFuelSurcharge Boolean 
+  applyTax Boolean 
+  isDeleted Boolean 
+  
+}
+
+
+entity WoTransportSegment {
+  
+  dateCreated LocalDate
+  type Integer max(11)
+  position Integer max(11)
+  airbillNumber String maxlength(255) 
+  oid Integer max(20) 
+}
+entity WoTruckingPreAlert {
+  dateCreated LocalDate 
+  truckingCompany String maxlength(255) 
+  truckingContact String maxlength(255) 
+  truckingPhoneNumber String maxlength(255) 
+  truckingFaxNumber String maxlength(255) 
+  jobDescription String maxlength(255) 
+  dimension String maxlength(255) 
+  typeOfTruck String maxlength(255) 
+  commodity String maxlength(255) 
+  truckingService String maxlength(255) 
+  truckingLocalDate LocalDate 
+  numberOfPieces Integer max(11) 
+  weight Float  
+  agreedPrice Double 
+  specialInstructions String maxlength(1000) 
+  deliveryLocalDate LocalDate 
+  pickupLocalDate LocalDate 
+}
+
+
+entity WoPod {
+  
+  chargeComments String maxlength(255)
+  fuelPercCharge Float
+  fuelPercCost Float
+  podTimestamp LocalDate
+  podGivenTo String maxlength(255)
+  podName String maxlength(255)
+  progressComment String maxlength(255)
+  taxType Integer max(11)
+  taxType2 Integer max(11)  
+  isCompleted Boolean
+  fuelCharge Float
+  fuelCost Float 
+  taxValue Float
+  taxValue2 Float
+  total Float
+  podTimestampHours String maxlength(45)
+  podTimestampMinutes String maxlength(45)
+}
+
+
+entity WoWorkOrder {
+  
+   
+  fromLocationType Integer max(11) 
+  toLocationType Integer max(11) 
+  fromAirportCode String maxlength(255) 
+  fromAirlineName String maxlength(255) 
+  toAirportCode String maxlength(255) 
+  toAirlineName String maxlength(255) 
+  fromLocalDate LocalDate 
+  toLocalDate LocalDate 
+  jobQuantity Integer max(11) 
+  jobQuantityType Integer max(11) 
+  jobPickupDate LocalDate 
+  jobDelivDeadline LocalDate 
+  jobWeight Integer max(11) 
+  jobContentDescr String maxlength(255) 
+  customsBrokerName String maxlength(255) 
+  customsPhoneNumber String maxlength(255) 
+  customsFaxNumber String maxlength(255) 
+  customsValue Double 
+  customsCurrency String maxlength(255) 
+  customsContactName String maxlength(255) 
+  quotedAmount String maxlength(255) 
+  quotedBy String maxlength(255)   
+  trailerNumber String maxlength(15) 
+  trailerSealNumber1 String maxlength(15) 
+  trailerSealNumber2 String maxlength(15) 
+  trailerReference1 String maxlength(15) 
+  trailerReference2 String maxlength(15) 
+  trailerCartonCount1 Integer max(11) 
+  trailerCartonCount2 Integer max(11) 
+  trailerWeight1 Integer max(11) 
+  trailerWeight2 Integer max(11) 
+  trailerDimensionWeight Float    
+   
+}
+
+
+
+entity EcommerceOrderTaxLines {
+  taxLinesTitle String maxlength(255) 
+  taxLinesRate Double 
+  taxLinesPrice Double 
+  
+  
+  }
+  
+entity EcomPlugins {
+
+pluginName String maxlength(30)
+createdDate ZonedDateTime 
+updatedDate ZonedDateTime 
+
+
+}
+
+
+entity P44OrderDetails {
+  
+  shipmentIdentifierType String maxlength(255)
+  shipmentIdentifierValue String maxlength(255)
+  capacityProviderBolUrl String maxlength(255)
+  capacityProviderAccountGroupCode String maxlength(255)
+  capacityProviderAccountGroupAccountCode String maxlength(255)
+
+ }
+ 
+entity EdiFiles {
+  
+  carrier String maxlength(50)
+  fileName String maxlength(50)
+  uploadedDate ZonedDateTime
+  uploadedBy String maxlength(50)
+  status Integer max(11)
+  recordStatus Boolean
+  
+  }
+
+entity EdiCarrierProcessor {
+ 
+ carrierName String maxlength(50)
+ type  String maxlength(10)
+ verifyEdiFile String maxlength(255)
+ ediFilePath String maxlength(255)
+ ediFileProcessor  String maxlength(255)
+ ediFileFormat String maxlength(50)
+ 
+}
+
+entity RecordDescription
+{
+ stringToIdentify String maxlength(50)
+ valueToMatch  String maxlength(10)
+ startLocation String maxlength(5)
+ recordDescriptionFile String maxlength(255)
+ dbTableName String maxlength(50)
+}
+
+entity EdiCarrierPackageTypes
+{
+carrierPackageName String maxlength(5)
+
+}
+
+entity MerchantAccount {
+
+     processor String maxlength(50)
+	 property String maxlength(50)
+	 propertyValue String maxlength(50)
+	 country String maxlength(50)
+	 active Boolean
+	 
+
+}
+
+entity LineItems {
+	
+  title String maxlength(255) 
+  quantity Integer max(20)
+  price Double
+  grams Double
+  sku String maxlength(255)
+  requiresShipping Boolean
+  taxable Boolean
+  name String maxlength(255) 
+  hsCode String maxlength(255)
+  position Integer max(20)
+   
+ 
+}
+
+entity WoWorkorderSubservice {
+   
+  name String maxlength(255) 
+  description String maxlength(255) 
+  chargeType Integer max(11) 
+  chargeValue Float 
+  chargeQuantity Integer max(11) 
+  chargeUnit String maxlength(255) 
+  costValue Float 
+  commissionable Boolean 
+  oid Integer max(20) 
+  position Integer max(11) 
+  
+}
+
+entity WoTruckingSegment {
+  
+  ltl String maxlength(255) 
+  ftl String maxlength(255) 
+  teamDriver String maxlength(255) 
+  dedicated String maxlength(255) 
+  manifestNbr String maxlength(255) 
+  lineHaul String maxlength(255) 
+  parsNbr String maxlength(255) 
+  papsNbr String maxlength(255) 
+  airwayBillInfo String maxlength(255) 
+}
+
+entity WoTax {
+  invoiceNumber String maxlength(255) 
+  ediChargeId Integer max(20) 
+  totalValue Float
+  totalValueCharge Float
+  name String maxlength(255) 
+  oid Integer max(20) 
+}
+
+entity WoFlightSegment {
+  
+  airName String maxlength(255) 
+  flightNbr String maxlength(255) 
+  airportCode String maxlength(255) 
+  etd LocalDate 
+  eta LocalDate 
+  service String maxlength(255) 
+  cwsAcctNbr String maxlength(255) 
+  customerAcctNbr String maxlength(255) 
+  spotRateKilo String maxlength(255) 
+  spotRateNbr String maxlength(255) 
+  consignAirwayBill String maxlength(255) 
+  carrierValue Integer max(11) 
+}
+
+entity FieldDescriptionEntity{
+
+	
+	columnName String maxlength(50) 
+	columnWidth String maxlength(50) 
+	mappedColumn String maxlength(50) 
+	format String maxlength(50) 
+	
+
+}
+  relationship ManyToMany {
+        Franchise to Carrier
+		
+  }
+   relationship OneToMany {
+    
+    EcommerceOrders to EcommerceOrderTaxLines
+	EcommerceOrders to LineItems
+    Customer to AddressBook
+	
+	EshipperUser{createdBy} to AddressBook
+	Province to Country
+    Country to City
+	
+	Carrier to CarrierService
+	Customer to CarrierDataFedexUS
+	Customer to CarrierDataFedexCan
+	Customer to CarrierDataFedexWebCan
+	Customer to CarrierDataFedexWebUsa
+	Customer to CarrierDataUpsCan
+	Customer to CarrierDataUpsUSA
+	Customer to CarrierDataPurolatorAcc
+	Customer to CarrierDataCanparAcc
+	Customer to CarrierDataCanadaPostAcc
+	Customer to CarrierDataDhlUsaAcc
+	Customer to CreditCard
+	Customer to AccountReceivable 
+	Franchise to AccountReceivable
+	ShippingOrder to ShipmentPackage
+	Customer to CustomPackages
+	
+	
+	Franchise to CarrierDataFedexUS
+	      Franchise to CarrierDataFedexCan
+	      Franchise to CarrierDataFedexWebCan
+	      Franchise to CarrierDataFedexWebUsa
+	      Franchise to CarrierDataUpsCan
+	      Franchise to CarrierDataUpsUSA
+	      Franchise to CarrierDataPurolatorAcc
+	      Franchise to CarrierDataCanparAcc
+	      Franchise to CarrierDataCanadaPostAcc
+	      Franchise to CarrierDataDhlUsaAcc
+		  Franchise to FranchiseAramex
+		  Franchise to FranchiseDhlgm
+		  Franchise to FranchiseFreightcom
+		  Franchise to FranchiseOrangeds
+		  Franchise to AccountPayableTransaction
+		  
+		  EdiCarrierProcessor to EdiCarrierPackageTypes
+		  
+		  
+	
+	
+	
+	
+    
+    
+    
+    
+    
+}
+relationship OneToOne {
+          
+          ArApCustomer to ArApCustomerEntityType
+		  
+		  EdiCarrierProcessor to RecordDescription
+		  Address to Country 
+          Address to Province
+          Address to City 
+		  ShippingAddress to Country
+		  ShippingAddress to Province
+		  ShippingAddress to City
+		  
+		  CustomerRestrictedCountry to RestrictedCountry
+		  CustomerCnb to Country
+		  Customer to CustomerRestrictedCountry
+		  Customer to EshipperUser
+		  Customer to CustomerAffiliate
+		  Customer to CustomerGeneral
+		  Customer to CustomerReference
+		  Customer to CustomerInsurance
+		  Customer to CustomerCnb
+		  Customer to CustomerAffiliate
+		  Customer to CustomerOperational
+		  Customer to CustomerDhlgm
+		  Customer to CustomerFlatrate
+		  Customer to Country 
+          Customer to Province
+          Customer to City
+		  CodTransaction to CodAccount
+		  BatchShipment to Customer
+		  BatchShipment to CarrierService
+		  BatchShipment to Carrier
+		  FuelSurcharge to Carrier
+		  FuelSurcharge to Country
+		  
+		  InstantQuote to Franchise
+		  News to Franchise
+		  
+		  ProductList to Customer          
+          ShippingOrder to Customer
+          ShippingOrder{shipFrom} to ShippingAddress
+          ShippingOrder{shipTo} to ShippingAddress
+          ShippingOrder to P44OrderDetails          
+          FranchiseMarkup to Franchise
+          FranchiseMarkup to PackageType
+          FranchiseMarkup to CarrierService
+          ShippingOrder to PackageType
+          EcommerceOrders to Customer
+          EcommerceOrders to PackageType
+          EcomStore to Customer	          
+          CustomsInvoice to Franchise
+          CustomsInvoice to CustomsInvoiceBilling
+          CustomsInvoice to CustomsInvoiceIbm
+          CustomsInvoiceProduct	to CustomsInvoice
+          AdditionalServiceChg to LtlAddSrvc
+          AccountPayableTransaction to ArApCustomer
+		  
+          
+          AffiliateLogs to Customer
+          CarrierAccount to Carrier	
+		  CarrierAccount{extCarrier} to Carrier
+		  Cctransaction to Customer
+		  Cctransaction to ShippingOrder 
+		  CodAccount to Customer
+		  CodAccount to Franchise
+		  CodTransaction to WoInvoice
+		  Crm to City
+		  Crm to Province
+		  Crm to Country
+		  CustomOptions to Customer
+		  CustomerMarkup to Customer
+		  CustomerMarkup to Franchise
+		  CustomerMarkup to CarrierService
+		  CustomerMarkup to PackageType
+		  
+		  CustomerGeneral{defaultPackageType} to PackageType
+		  
+		  Franchise to FranchiseInHouseIns
+		  Franchise to FranchiseSmtp
+		  Franchise{defaultService} to CarrierService
+		  Franchise{defaultPackageType} to PackageType
+		  Franchise to FranchiseCredentail
+		  Franchise to FranchiseEmail
+		  Franchise{masterFranchise} to Franchise
+		  Franchise to FranchisePage
+		  Franchise to FranchiseCharge
+		  Franchise{defaultUser} to EshipperUser
+		  Franchise{defaultCustomer} to Customer
+		  Franchise{webCustomer} to Customer
+		  InstantQuotePackage to InstantQuote
+		  LtlAddSrvc to LtlAddSrvcDlvryCnstructn
+		  LtlAddSrvc to LtlAddSrvcCod
+		  LtlAddSrvc to LtlAddSrvcCrossBorder
+		  LtlAddSrvc to LtlAddSrvcDangerGoods
+		  LtlAddSrvc to LtlAddSrvcDlvryAppt
+		  LtlAddSrvc to LtlAddSrvcDlvryInside
+		  LtlAddSrvc to LtlAddSrvcDlvryRsdntls
+		  LtlAddSrvc to LtlAddSrvcDlvrySaturday
+		  LtlAddSrvc to LtlAddSrvcDlvryTailgate
+		  LtlAddSrvc to LtlAddSrvcHeatedDetails
+		  LtlAddSrvc to LtlAddSrvcHome
+		  LtlAddSrvc to LtlAddSrvcInbondFreight
+		  LtlAddSrvc to LtlAddSrvcLimitedAccess
+		  LtlAddSrvc to LtlAddSrvcPckpAppt
+		  LtlAddSrvc to LtlAddSrvcPckpCnstructn
+		  LtlAddSrvc to LtlAddSrvcPckpRsdtl
+		  LtlAddSrvc to LtlAddSrvcPckpInside
+		  LtlAddSrvc to LtlAddSrvcPckpSaturday
+		  LtlAddSrvc to LtlAddSrvcPckpTailgate
+		  LtlAddSrvc to LtlAddSrvcPierAccess
+		  LtlAddSrvc to LtlAddSrvcSortSegregate
+		  LtlAsToCity{toCity} to City
+		  LtlAsToCity{asToCity} to City
+		  LtlAsToCity{toProvince} to Province
+		  LtlFromCity{fromCity} to City
+		  LtlFromCity{province} to Province
+		  LtlFromCity{country} to Country
+		  LtlFromCity to Carrier
+		  LtlMoRate to Country
+		  LtlMoRate{fromProvince} to Province
+		  LtlMoRate{toProvince} to Province
+		  LtlMoRate{fromCity} to City
+		  LtlMoRate{toCity} to City
+		  LtlMoRate to LtlServices
+		  LtlFromCity to LtlServices
+		  LtlShipToRate to LtlServices
+		  LtlShipToRate to Country
+		  LtlShipToRate{toState} to Province
+		  LtlShipToRate{toCity} to City
+		  LtlStateProvinceSurcharge to Country
+		  LtlStateProvinceSurcharge{stProv} to Province
+		  LtlStateProvinceSurcharge to LtlServices
+		  LtlTracking to LtlServices
+		  LtlTracking to Franchise
+		  LtlTransitTime to LtlServices
+		  LtlTransitTime{fromProv} to Province
+		  LtlTransitTime{toProv} to Province
+		  News to EshipperUser
+		  InstantQuote{fromCity} to City
+		  InstantQuote{fromState} to Province
+		  InstantQuote{fromCountry} to Country
+		  InstantQuote{toCity} to City
+		  InstantQuote{toState} to Province
+		  InstantQuote{toCountry} to Country
+		  PackingSlip{order} to ShippingOrder
+		  Pickup to City
+		  Pickup to Province
+		  Pickup to Country
+		  Pickup to Customer
+		  Pickup to Carrier
+		  Pickup to Cctransaction
+		  Pickup to CarrierService
+		  Pickup to Franchise
+		  Pickup to PackageType
+		  ProductList{countryOfOrigin} to Country
+		  ShippingLabels{origin} to Country
+		  ShippingLabels{order} to ShippingOrder
+		  ShippingOrder to Carrier 
+ ShippingOrder to CarrierService 
+ ShippingOrder to Franchise
+ ShippingOrder to BatchShipment
+ ShippingOrder{status} to OrderStatus
+ ShippingOrder{returnOrder} to ShippingOrder
+ ShippingOrder{scheduledPickUp} to Pickup
+ ShippingOrder{ecommerceOrder} to EcommerceOrders
+ ShippingOrder{billingAddress} to Address 
+ ShippingOrder{shipper} to Customer
+ ShippingOrder{distributionService} to CarrierService
+ ShippingOrderBilling to Country
+ ShippingOrder to ShippingOrderTracking
+ ShippingOrder to ShippingOrderAddSvc
+ ShippingOrder to ShippingOrderBilling
+ ShippingOrder to ShippingOrderCODService
+ ShippingOrder to ShippingOrderConfig
+ ShippingOrder to ShippingOrderCost
+ ShippingOrder to ShippingOrderMarkup
+ EcommerceOrders to Customer
+ EcommerceOrders{billingAddress} to ShippingAddress
+ EcommerceOrders{shippingAddress} to ShippingAddress
+ 
+ EcommerceOrders to EcomStore
+ Surcharge to ShippingOrder
+ Surcharge to Franchise
+ Surcharge{chargeType} to SurchargeType
+ 
+  
+ AccountsPayableCategory to Franchise
+AccountsPayableCheque{payable} to AccountsPayableCategory
+AccountsPayablePayables to Address 
+AccountsPayablePayables to Franchise
+AccountsPayablePayables to AccountsPayableCategory
+
+
+
+AccountsReceivableDetails to WoInvoice
+WoAgent to Franchise
+WoAgent to Address
+ApChequeTrans to AccountsPayableCheque
+ApChequeTrans to AccountsPayablePayables
+WoCommReport{salesAgent} to EshipperUser
+WoDeliveryPreAlert{shipperAddress} to ShippingAddress
+WoDeliveryPreAlert{consigneeAddress} to Address
+WoDocs to WoOrders
+EdiCharge to Carrier
+EdiCharge{eshipperSurcharge} to Surcharge
+EdiHeader to Franchise
+EdiService to Carrier
+EdiShippingOrder to Carrier
+EdiShippingOrder to CarrierService
+EdiShippingOrder{eshipperO} to ShippingOrder
+WoInvoice to Franchise
+WoInvoice to Customer
+EdiShippingOrder to WoJobType
+WoPod to WoJobType
+WoOrders to Customer
+WoOrders to Franchise
+WoOrders{shipTo} to ShippingAddress
+WoOrders{shipFrom} to ShippingAddress
+WoPackage to WoOrders
+WoSalesAgent to Address
+WoSalesAgent to EshipperUser
+WoSalesAgent to Franchise
+WoService to Franchise
+WoTransportSegment to Customer
+WoTruckingPreAlert{deliveryAddress} to Address
+WoTruckingPreAlert{pickupAddress} to Address
+WoWorkOrder{Agent} to WoAgent
+WoWorkOrder{deliveryPrealert} to WoDeliveryPreAlert
+WoWorkOrder{truckingPrealert} to WoTruckingPreAlert
+WoWorkOrder{eshipperOrder} to ShippingOrder 
+WoWorkOrder{jobType} to WoJobType
+WoWorkOrder to WoPod
+CustomsInvoice{order} to ShippingOrder
+EdiCharge  to EdiChargeGroup
+WoSubservice to Surcharge 
+WoTransportSegment to Customer
+EdiCarrierPackageTypes to PackageType
+
+
+
+ 
+
+
+
+
+
+		  
+		  
+		  
+		  
+		  
+
+		
+		  
+		  		     
+  
+		   
+  
+		  
+	 
+		  
+  
+		  
+		  
+          
+}
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl
+
+
+
+
